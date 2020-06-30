@@ -3,7 +3,8 @@ use Illuminate\Http\Response;
 
 //default
 Route::get("/", function () {
-    return view("welcome");
+    // return view("welcome");
+    return view("gambo");
 });
 //Demo (Delete after site publish.)
 Route::get("/tables_check_view_html",function(){
