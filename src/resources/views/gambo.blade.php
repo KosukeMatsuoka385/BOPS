@@ -12,7 +12,7 @@
 		<title>Gambo - Index</title>
 
 		<!-- Favicon Icon -->
-		<link rel="icon" type="image/png" href="images/fav.png">
+		<link rel="icon" type="image/png" href="{{ asset('/Frontend/images/fav.png">
 
 		<!-- Stylesheets -->
 		<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -48,7 +48,7 @@
 						<li>
 							<a href="#" class="single-cat-item">
 								<div class="icon">
-									<img src="images/category/icon-1.svg" alt="">
+									<img src="{{ asset('/Frontend/images/category/icon-1.svg') }}" alt="">
 								</div>
 								<div class="text"> Fruits and Vegetables </div>
 							</a>
@@ -56,7 +56,7 @@
 						<li>
 							<a href="#" class="single-cat-item">
 								<div class="icon">
-									<img src="images/category/icon-2.svg" alt="">
+									<img src="{{ asset('/Frontend/images/category/icon-2.svg') }}" alt="">
 								</div>
 								<div class="text"> Grocery & Staples </div>
 							</a>
@@ -64,7 +64,7 @@
 						<li>
 							<a href="#" class="single-cat-item">
 								<div class="icon">
-									<img src="images/category/icon-3.svg" alt="">
+									<img src="{{ asset('/Frontend/images/category/icon-3.svg') }}" alt="">
 								</div>
 								<div class="text"> Dairy & Eggs </div>
 							</a>
@@ -72,7 +72,7 @@
 						<li>
 							<a href="#" class="single-cat-item">
 								<div class="icon">
-									<img src="images/category/icon-4.svg" alt="">
+									<img src="{{ asset('/Frontend/images/category/icon-4.svg') }}" alt="">
 								</div>
 								<div class="text"> Beverages </div>
 							</a>
@@ -80,7 +80,7 @@
 						<li>
 							<a href="#" class="single-cat-item">
 								<div class="icon">
-									<img src="images/category/icon-5.svg" alt="">
+									<img src="{{ asset('/Frontend/images/category/icon-5.svg') }}" alt="">
 								</div>
 								<div class="text"> Snacks </div>
 							</a>
@@ -88,7 +88,7 @@
 						<li>
 							<a href="#" class="single-cat-item">
 								<div class="icon">
-									<img src="images/category/icon-6.svg" alt="">
+									<img src="{{ asset('/Frontend/images/category/icon-6.svg') }}" alt="">
 								</div>
 								<div class="text"> Home Care </div>
 							</a>
@@ -96,7 +96,7 @@
 						<li>
 							<a href="#" class="single-cat-item">
 								<div class="icon">
-									<img src="images/category/icon-7.svg" alt="">
+									<img src="{{ asset('/Frontend/images/category/icon-7.svg') }}" alt="">
 								</div>
 								<div class="text"> Noodles & Sauces </div>
 							</a>
@@ -104,7 +104,7 @@
 						<li>
 							<a href="#" class="single-cat-item">
 								<div class="icon">
-									<img src="images/category/icon-8.svg" alt="">
+									<img src="{{ asset('/Frontend/images/category/icon-8.svg') }}" alt="">
 								</div>
 								<div class="text"> Personal Care </div>
 							</a>
@@ -112,7 +112,7 @@
 						<li>
 							<a href="#" class="single-cat-item">
 								<div class="icon">
-									<img src="images/category/icon-9.svg" alt="">
+									<img src="{{ asset('/Frontend/images/category/icon-9.svg') }}" alt="">
 								</div>
 								<div class="text"> Pet Care </div>
 							</a>
@@ -143,7 +143,7 @@
 					<div class="search-by-cat">
                         <a href="#" class="single-cat">
                             <div class="icon">
-								<img src="images/category/icon-1.svg" alt="">
+								<img src="{{ asset('/Frontend/images/category/icon-1.svg') }}" alt="">
                             </div>
                             <div class="text">
                                 Fruits and Vegetables
@@ -151,49 +151,49 @@
                         </a>
 						<a href="#" class="single-cat">
 							<div class="icon">
-								<img src="images/category/icon-2.svg" alt="">
+								<img src="{{ asset('/Frontend/images/category/icon-2.svg') }}" alt="">
 							</div>
 							<div class="text"> Grocery & Staples </div>
 						</a>
 						<a href="#" class="single-cat">
 							<div class="icon">
-								<img src="images/category/icon-3.svg" alt="">
+								<img src="{{ asset('/Frontend/images/category/icon-3.svg') }}" alt="">
 							</div>
 							<div class="text"> Dairy & Eggs </div>
 						</a>
 						<a href="#" class="single-cat">
 							<div class="icon">
-								<img src="images/category/icon-4.svg" alt="">
+								<img src="{{ asset('/Frontend/images/category/icon-4.svg') }}" alt="">
 							</div>
 							<div class="text"> Beverages </div>
 						</a>
 						<a href="#" class="single-cat">
 							<div class="icon">
-								<img src="images/category/icon-5.svg" alt="">
+								<img src="{{ asset('/Frontend/images/category/icon-5.svg') }}" alt="">
 							</div>
 							<div class="text"> Snacks </div>
 						</a>
 						<a href="#" class="single-cat">
 							<div class="icon">
-								<img src="images/category/icon-6.svg" alt="">
+								<img src="{{ asset('/Frontend/images/category/icon-6.svg') }}" alt="">
 							</div>
 							<div class="text"> Home Care </div>
 						</a>
 						<a href="#" class="single-cat">
 							<div class="icon">
-								<img src="images/category/icon-7.svg" alt="">
+								<img src="{{ asset('/Frontend/images/category/icon-7.svg') }}" alt="">
 							</div>
 							<div class="text"> Noodles & Sauces </div>
 						</a>
 						<a href="#" class="single-cat">
 							<div class="icon">
-								<img src="images/category/icon-8.svg" alt="">
+								<img src="{{ asset('/Frontend/images/category/icon-8.svg') }}" alt="">
 							</div>
 							<div class="text"> Personal Care </div>
 						</a>
 						<a href="#" class="single-cat">
 							<div class="icon">
-								<img src="images/category/icon-9.svg" alt="">
+								<img src="{{ asset('/Frontend/images/category/icon-9.svg') }}" alt="">
 							</div>
 							<div class="text"> Pet Care </div>
 						</a>
@@ -223,7 +223,7 @@
 			<div class="side-cart-items">
 				<div class="cart-item">
 					<div class="cart-product-img">
-						<img src="images/product/img-1.jpg" alt="">
+						<img src="{{ asset('/Frontend/images/product/img-1.jpg') }}" alt="">
 						<div class="offer-badge">6% OFF</div>
 					</div>
 					<div class="cart-text">
@@ -262,7 +262,7 @@
 				</div>
 				<div class="cart-item">
 					<div class="cart-product-img">
-						<img src="images/product/img-2.jpg" alt="">
+						<img src="{{ asset('/Frontend/images/product/img-2.jpg') }}" alt="">
 						<div class="offer-badge">6% OFF</div>
 					</div>
 					<div class="cart-text">
@@ -317,11 +317,11 @@
 		<div class="top-header-group">
 			<div class="top-header">
 				<div class="res_main_logo">
-					<a href="index.html"><img src="images/dark-logo-1.svg" alt=""></a>
+					<a href="index.html"><img src="{{ asset('/Frontend/images/dark-logo-1.svg') }}" alt=""></a>
 				</div>
 				<div class="main_logo" id="logo">
-					<a href="index.html"><img src="images/logo.svg" alt=""></a>
-					<a href="index.html"><img class="logo-inverse" src="images/dark-logo.svg" alt=""></a>
+					<a href="index.html"><img src="{{ asset('/Frontend/images/logo.svg') }}" alt=""></a>
+					<a href="index.html"><img class="logo-inverse" src="{{ asset('/Frontend/images/dark-logo.svg') }}" alt=""></a>
 				</div>
 				<div class="select_location">
 					<div class="ui inline dropdown loc-title">
@@ -390,7 +390,7 @@
 						</li>
 						<li class="ui dropdown">
 							<a href="#" class="opts_account">
-								<img src="images/avatar/img-5.jpg" alt="">
+								<img src="{{ asset('/Frontend/images/avatar/img-5.jpg') }}" alt="">
 								<span class="user__name">John Doe</span>
 								<i class="uil uil-angle-down"></i>
 							</a>
@@ -492,7 +492,7 @@
 								<div class="offer-item">
 									<div class="offer-item-img">
 										<div class="gambo-overlay"></div>
-										<img src="images/banners/offer-1.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/banners/offer-1.jpg') }}" alt="">
 									</div>
 									<div class="offer-text-dt">
 										<div class="offer-top-text-banner">
@@ -508,7 +508,7 @@
 								<div class="offer-item">
 									<div class="offer-item-img">
 										<div class="gambo-overlay"></div>
-										<img src="images/banners/offer-2.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/banners/offer-2.jpg') }}" alt="">
 									</div>
 									<div class="offer-text-dt">
 										<div class="offer-top-text-banner">
@@ -524,7 +524,7 @@
 								<div class="offer-item">
 									<div class="offer-item-img">
 										<div class="gambo-overlay"></div>
-										<img src="images/banners/offer-3.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/banners/offer-3.jpg') }}" alt="">
 									</div>
 									<div class="offer-text-dt">
 										<div class="offer-top-text-banner">
@@ -540,7 +540,7 @@
 								<div class="offer-item">
 									<div class="offer-item-img">
 										<div class="gambo-overlay"></div>
-										<img src="images/banners/offer-4.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/banners/offer-4.jpg') }}" alt="">
 									</div>
 									<div class="offer-text-dt">
 										<div class="offer-top-text-banner">
@@ -556,7 +556,7 @@
 								<div class="offer-item">
 									<div class="offer-item-img">
 										<div class="gambo-overlay"></div>
-										<img src="images/banners/offer-5.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/banners/offer-5.jpg') }}" alt="">
 									</div>
 									<div class="offer-text-dt">
 										<div class="offer-top-text-banner">
@@ -591,7 +591,7 @@
 							<div class="item">
 								<a href="#" class="category-item">
 									<div class="cate-img">
-										<img src="images/category/icon-1.svg" alt="">
+										<img src="{{ asset('/Frontend/images/category/icon-1.svg') }}" alt="">
 									</div>
 									<h4>Vegetables & Fruits</h4>
 								</a>
@@ -599,7 +599,7 @@
 							<div class="item">
 								<a href="#" class="category-item">
 									<div class="cate-img">
-										<img src="images/category/icon-2.svg" alt="">
+										<img src="{{ asset('/Frontend/images/category/icon-2.svg') }}" alt="">
 									</div>
 									<h4> Grocery & Staples </h4>
 								</a>
@@ -607,7 +607,7 @@
 							<div class="item">
 								<a href="#" class="category-item">
 									<div class="cate-img">
-										<img src="images/category/icon-3.svg" alt="">
+										<img src="{{ asset('/Frontend/images/category/icon-3.svg') }}" alt="">
 									</div>
 									<h4> Dairy & Eggs </h4>
 								</a>
@@ -615,7 +615,7 @@
 							<div class="item">
 								<a href="#" class="category-item">
 									<div class="cate-img">
-										<img src="images/category/icon-4.svg" alt="">
+										<img src="{{ asset('/Frontend/images/category/icon-4.svg') }}" alt="">
 									</div>
 									<h4> Beverages </h4>
 								</a>
@@ -623,7 +623,7 @@
 							<div class="item">
 								<a href="#" class="category-item">
 									<div class="cate-img">
-										<img src="images/category/icon-5.svg" alt="">
+										<img src="{{ asset('/Frontend/images/category/icon-5.svg') }}" alt="">
 									</div>
 									<h4> Snacks </h4>
 								</a>
@@ -631,7 +631,7 @@
 							<div class="item">
 								<a href="#" class="category-item">
 									<div class="cate-img">
-										<img src="images/category/icon-6.svg" alt="">
+										<img src="{{ asset('/Frontend/images/category/icon-6.svg') }}" alt="">
 									</div>
 									<h4> Home Care </h4>
 								</a>
@@ -639,7 +639,7 @@
 							<div class="item">
 								<a href="#" class="category-item">
 									<div class="cate-img">
-										<img src="images/category/icon-7.svg" alt="">
+										<img src="{{ asset('/Frontend/images/category/icon-7.svg') }}" alt="">
 									</div>
 									<h4> Noodles & Sauces </h4>
 								</a>
@@ -647,7 +647,7 @@
 							<div class="item">
 								<a href="#" class="category-item">
 									<div class="cate-img">
-										<img src="images/category/icon-8.svg" alt="">
+										<img src="{{ asset('/Frontend/images/category/icon-8.svg') }}" alt="">
 									</div>
 									<h4> Personal Care </h4>
 								</a>
@@ -655,7 +655,7 @@
 							<div class="item">
 								<a href="#" class="category-item">
 									<div class="cate-img">
-										<img src="images/category/icon-9.svg" alt="">
+										<img src="{{ asset('/Frontend/images/category/icon-9.svg') }}" alt="">
 									</div>
 									<h4> Pet Care </h4>
 								</a>
@@ -663,7 +663,7 @@
 							<div class="item">
 								<a href="#" class="category-item">
 									<div class="cate-img">
-										<img src="images/category/icon-10.svg" alt="">
+										<img src="{{ asset('/Frontend/images/category/icon-10.svg') }}" alt="">
 									</div>
 									<h4> Meat & Seafood </h4>
 								</a>
@@ -671,7 +671,7 @@
 							<div class="item">
 								<a href="#" class="category-item">
 									<div class="cate-img">
-										<img src="images/category/icon-11.svg" alt="">
+										<img src="{{ asset('/Frontend/images/category/icon-11.svg') }}" alt="">
 									</div>
 									<h4> Electronics </h4>
 								</a>
@@ -700,7 +700,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-1.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-1.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">6% off</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -724,7 +724,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-2.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-2.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">2% off</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -748,7 +748,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-3.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-3.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">5% off</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -772,7 +772,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-4.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-4.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">3% off</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -796,7 +796,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-5.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-5.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">2% off</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -820,7 +820,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-6.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-6.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">2% off</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -844,7 +844,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-7.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-7.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">1% off</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -868,7 +868,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-8.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-8.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">3% off</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -909,17 +909,17 @@
 					</div>
 					<div class="col-lg-4 col-md-6">
 						<a href="#" class="best-offer-item">
-							<img src="images/best-offers/offer-1.jpg" alt="">
+							<img src="{{ asset('/Frontend/images/best-offers/offer-1.jpg') }}" alt="">
 						</a>
 					</div>
 					<div class="col-lg-4 col-md-6">
 						<a href="#" class="best-offer-item">
-							<img src="images/best-offers/offer-2.jpg" alt="">
+							<img src="{{ asset('/Frontend/images/best-offers/offer-2.jpg') }}" alt="">
 						</a>
 					</div>
 					<div class="col-lg-4 col-md-6">
 						<a href="#" class="best-offer-item offr-none">
-							<img src="images/best-offers/offer-3.jpg" alt="">
+							<img src="{{ asset('/Frontend/images/best-offers/offer-3.jpg') }}" alt="">
 							<div class="cmtk_dt">
 								<div class="product_countdown-timer offer-counter-text" data-countdown="2021/01/06"></div>
 							</div>
@@ -927,7 +927,7 @@
 					</div>
 					<div class="col-md-12">
 						<a href="#" class="code-offer-item">
-							<img src="images/best-offers/offer-4.jpg" alt="">
+							<img src="{{ asset('/Frontend/images/best-offers/offer-4.jpg') }}" alt="">
 						</a>
 					</div>
 				</div>
@@ -952,7 +952,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-11.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-11.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">6% off</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -976,7 +976,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-12.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-12.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">2% off</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -1000,7 +1000,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-13.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-13.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">5% off</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -1024,7 +1024,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-1.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-1.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">3% off</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -1048,7 +1048,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-5.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-5.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">2% off</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -1072,7 +1072,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-6.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-6.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">2% off</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -1096,7 +1096,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-14.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-14.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">1% off</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -1120,7 +1120,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-3.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-3.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">3% off</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -1165,7 +1165,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-10.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-10.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">New</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -1189,7 +1189,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-9.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-9.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">New</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -1213,7 +1213,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-15.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-15.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">5% off</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -1237,7 +1237,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-11.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-11.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">New</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -1261,7 +1261,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-14.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-14.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">New</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -1285,7 +1285,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-2.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-2.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">New</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -1309,7 +1309,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-5.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-5.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">New</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -1333,7 +1333,7 @@
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
-										<img src="images/product/img-6.jpg" alt="">
+										<img src="{{ asset('/Frontend/images/product/img-6.jpg') }}" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">New</span>
 											<span class="like-icon" title="wishlist"></span>
@@ -1442,8 +1442,8 @@
 						<div class="second-row-item-app">
 							<h4>Download App</h4>
 							<ul>
-								<li><a href="#"><img class="download-btn" src="images/download-1.svg" alt=""></a></li>
-								<li><a href="#"><img class="download-btn" src="images/download-2.svg" alt=""></a></li>
+								<li><a href="#"><img class="download-btn" src="{{ asset('/Frontend/images/download-1.svg') }}" alt=""></a></li>
+								<li><a href="#"><img class="download-btn" src="{{ asset('/Frontend/images/download-2.svg') }}" alt=""></a></li>
 							</ul>
 						</div>
 						<div class="second-row-item-payment">
@@ -1451,19 +1451,19 @@
 							<div class="footer-payments">
 								<ul id="paypal-gateway" class="financial-institutes">
 									<li class="financial-institutes__logo">
-									  <img alt="Visa" title="Visa" src="images/footer-icons/pyicon-6.svg">
+									  <img alt="Visa" title="Visa" src="{{ asset('/Frontend/images/footer-icons/pyicon-6.svg') }}" >
 									</li>
 									<li class="financial-institutes__logo">
-									  <img alt="Visa" title="Visa" src="images/footer-icons/pyicon-1.svg">
+									  <img alt="Visa" title="Visa" src="{{ asset('/Frontend/images/footer-icons/pyicon-1.svg') }}" >
 									</li>
 									<li class="financial-institutes__logo">
-									  <img alt="MasterCard" title="MasterCard" src="images/footer-icons/pyicon-2.svg">
+									  <img alt="MasterCard" title="MasterCard" src="{{ asset('/Frontend/images/footer-icons/pyicon-2.svg') }}" >
 									</li>
 									<li class="financial-institutes__logo">
-									  <img alt="American Express" title="American Express" src="images/footer-icons/pyicon-3.svg">
+									  <img alt="American Express" title="American Express" src="{{ asset('/Frontend/images/footer-icons/pyicon-3.svg') }}" >
 									</li>
 									<li class="financial-institutes__logo">
-									  <img alt="Discover" title="Discover" src="images/footer-icons/pyicon-4.svg">
+									  <img alt="Discover" title="Discover" src="{{ asset('/Frontend/images/footer-icons/pyicon-4.svg') }}" >
 									</li>
 								</ul>
 							</div>
