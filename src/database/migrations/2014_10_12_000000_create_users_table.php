@@ -19,12 +19,12 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('phone');
-            $table->string('credit_name');
-            $table->integer('credit_number');
-            $table->integer('credit_exmonth');
-            $table->integer('credit_exyear');
-            $table->integer('credit_cvv');
+            $table->string('phone')->nullable();
+            $table->string('credit_name')->nullable();
+            $table->integer('credit_number')->nullable();
+            $table->integer('credit_exmonth')->nullable();
+            $table->integer('credit_exyear')->nullable();
+            $table->integer('credit_cvv')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
