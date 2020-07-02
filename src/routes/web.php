@@ -6,6 +6,13 @@ Route::get("/", function () {
     // return view("welcome");
     return view("gambo");
 });
+
+//default
+Route::get("/laradb", function () {
+    return view("welcome");
+    // return view("gambo");
+});
+
 //Demo (Delete after site publish.)
 Route::get("/tables_check_view_html",function(){
     return view("tables_check_view_html");
@@ -214,3 +221,7 @@ Route::put("m_pick_time/{id}", "MPickTimesController@update");
 //destroy
 Route::delete("m_pick_time/{id}", "MPickTimesController@destroy");
 //=======================================================================
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
