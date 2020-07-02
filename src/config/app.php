@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'BOPS'),
 
     /*
     |--------------------------------------------------------------------------
@@ -66,8 +66,9 @@ return [
     | ahead and set this to a sensible default for you out of the box.
     |
     */
-
-    'timezone' => 'UTC',
+    // LaravelのtimezoneをデフォルトのUTCからJST(日本標準時)へ変更する
+    // https://qiita.com/pinkumohikan/items/2e9cefb85d75a8622d99
+    'timezone' => 'Asia/Tokyo',
 
     /*
     |--------------------------------------------------------------------------
@@ -80,7 +81,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'ja',
 
     /*
     |--------------------------------------------------------------------------
@@ -93,7 +94,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'ja',
 
     /*
     |--------------------------------------------------------------------------
@@ -106,7 +107,9 @@ return [
     |
     */
 
-    'faker_locale' => 'en_US',
+    // LaravelのFakerを日本語化する
+    // https://qiita.com/kazuhei/items/5d33eedb9ebdd62e0bfb
+    'faker_locale' => 'ja_JP',
 
     /*
     |--------------------------------------------------------------------------
