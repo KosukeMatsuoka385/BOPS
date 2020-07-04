@@ -18,6 +18,12 @@ Route::get("/tables_check_view_html",function(){
     return view("tables_check_view_html");
 });
 
+//checkout
+Route::get("/checkout",function(){
+    return view("checkout");
+});
+// Route::get("/checkout", "CheckoutController@checkout");
+
 //=======================================================================
 //index
 Route::get("item/", "ItemsController@index");
