@@ -24,6 +24,17 @@ Route::get("/checkout",function(){
 });
 // Route::get("/checkout", "CheckoutController@checkout");
 
+//orderplaced
+Route::get("/orderplaced",function(){
+    return view("orderplaced");
+});
+
+//myorder
+Route::get("/myorder",function(){
+    return view("myorder");
+});
+
+
 //=======================================================================
 //index
 Route::get("item/", "ItemsController@index");
