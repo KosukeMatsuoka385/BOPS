@@ -15,7 +15,7 @@
                     Schema::create("m_categories", function (Blueprint $table) {
 						$table->increments('id');
 						$table->string('name');
-						$table->string('image');
+						$table->string('img');
 
 
 

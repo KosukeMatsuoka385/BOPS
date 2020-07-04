@@ -16,6 +16,13 @@
 						$table->increments('id')->unsigned();
 						$table->string('name');
 						$table->integer('store_group_id')->unsigned();
+						$table->string('address');
+						$table->integer('tel')->nullable();
+						$table->string('open_time')->nullable();
+						$table->string('close_time')->nullable();
+						$table->string('appearance_img')->nullable();
+						$table->string('store_url')->nullable();
+						$table->string('map_url')->nullable();
 						//$table->foreign("store_group_id")->references("id")->on("m_store_groups");
 
 

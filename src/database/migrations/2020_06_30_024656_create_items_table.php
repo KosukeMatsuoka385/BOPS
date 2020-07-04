@@ -20,7 +20,7 @@
 						$table->integer('price');
 						$table->integer('stock');
 						$table->string('description');
-						$table->string('image');
+						$table->string('img')->nullable();
 						$table->integer('store_id')->unsigned();
 						$table->integer('is_addone');
 						$table->timestamps();

@@ -32,7 +32,7 @@
                                 <div class="table-responsive">
                                     <table class="table table-borderless">
                                         <thead>
-                                            <tr><th>id</th><th>name</th><th>store_group_id</th><th>name</th></tr>
+                                            <tr><th>id</th><th>name</th><th>store_group_id</th><th>address</th><th>tel</th><th>open_time</th><th>close_time</th><th>appearance_img</th><th>store_url</th><th>map_url</th><th>name</th><th>logo_img</th></tr>
                                         </thead>
                                         <tbody>
                                         @foreach($m_store as $item)
@@ -45,7 +45,23 @@
 
                                             <td>{{ $item->store_group_id}} </td>
 
+                                            <td>{{ $item->address}} </td>
+
+                                            <td>{{ $item->tel}} </td>
+
+                                            <td>{{ $item->open_time}} </td>
+
+                                            <td>{{ $item->close_time}} </td>
+
+                                            <td>{{ $item->appearance_img}} </td>
+
+                                            <td>{{ $item->store_url}} </td>
+
+                                            <td>{{ $item->map_url}} </td>
+
                                                     <td>{{ $item->name}} </td>
+
+                                                    <td>{{ $item->logo_img}} </td>
   
                                                 <td><a href="{{ url("/m_store/" . $item->id) }}" title="View m_store"><button class="btn btn-info btn-xs">View</button></a></td>
                                                 <td><a href="{{ url("/m_store/" . $item->id . "/edit") }}" title="Edit m_store"><button class="btn btn-primary btn-xs">Edit</button></a></td>
