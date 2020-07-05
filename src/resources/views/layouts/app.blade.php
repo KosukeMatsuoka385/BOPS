@@ -1,8 +1,16 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Example</title>
+
+<!-- Custome Stylesheets -->
+<link href="{{ asset('/css/style.css') }}" rel="stylesheet">
+
+<!-- Gambo Stylesheets -->
+<!-- Favicon Icon -->
+<link rel="icon" type="image/png" href="{{ asset('/Frontend/images/fav.png') }}">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -103,8 +111,7 @@
         </main>
     </div>
 
-
-    <!-- Javascripts -->
+    <!-- Ganbo Javascripts -->
 	<script src="{{ asset('/Frontend/js/jquery-3.3.1.min.js') }}"></script>
 	<script src="{{ asset('/Frontend/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 	<script src="{{ asset('/Frontend/vendor/OwlCarousel/owl.carousel.js') }}"></script>
@@ -112,7 +119,9 @@
 	<script src="{{ asset('/Frontend/js/jquery.countdown.min.js') }}"></script>
 	<script src="{{ asset('/Frontend/js/custom.js') }}"></script>
 	<script src="{{ asset('/Frontend/js/offset_overlay.js') }}"></script>
-	<script src="{{ asset('/Frontend/js/night-mode.js') }}"></script>
+    <script src="{{ asset('/Frontend/js/night-mode.js') }}"></script>
 
+    <!-- Custome Stylesheets -->
+    <script src="{{ asset('/js/app.js') }}"></script>
 </body>
 </html>
