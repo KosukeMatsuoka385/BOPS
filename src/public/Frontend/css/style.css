@@ -6585,3 +6585,7 @@ textarea {
     font-weight: 500;
     display: inline-block;
 }
+
+.footer-li{
+    list-style: none;
+}
