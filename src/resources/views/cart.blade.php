@@ -46,7 +46,7 @@
 	<!-- Cart Sidebar Offset Start-->
 	<div class="bs-canvas bs-canvas-left position-fixed bg-cart h-100">
 		<div class="bs-canvas-header side-cart-header p-3 ">
-			<div class="d-inline-block  main-cart-title">カートの中身<span>(2)</span><span>品</span></div>
+			<div class="d-inline-block  main-cart-title">カートの中身<span>{{$count}}</span><span>品</span></div>
 			<button type="button" class="bs-canvas-close close" aria-label="Close" onclick="location.href='/menus'" style="font-weight: 200; line-height: 1.3;">戻る</button>
 		</div>
 		<!-- カートの中身 -->
@@ -63,22 +63,23 @@
 								<input type="button" value="+" class="plus plus-btn">
 							</div>
 							<div name="quantity" class="cart-item-price">{{ Session::get("price$i") }}円</div>
-							<div class="cart-item-price">{{ Session::get("qty$i") }}つ</div>
+							<!-- <div class="cart-item-price">{{ Session::get("qty$i") }}つ</div> -->
 						</div>
 						<!-- 削除ボタン -->
-						<form action="{{'/cart'}}" method="POST">
+						<!-- <form action="/cart/delete/{{$i}}" method="POST">
+						<input type="hidden" value="kame">
 							{{(csrf_field())}}
 							{{method_field('DELETE')}}
 							<button type="submit" class="cart-close-btn">
+							{{ Session::get("price$i") }}
 								<i class="uil uil-multiply"></i>
 							</button>
-						</form>
+						</form> -->
 					</div>
 			</div>
 			@endfor
 		</div>
 		<!-- foreachで表示 -->
-		.
 	</div>
 	</div>
 	<!-- カートの中身 -->
@@ -88,18 +89,16 @@
 		{{csrf_field()}}
 		<div class="bs-canvas-footer">
 			<div class="main-total-cart">
-				<h2>消費税</h2>
-				<span>$tax</span>
+				<h2>消費税(8%)</h2>
+				<input type="hidden" name="tax" value='{"tax": {{ Session::get("tax") }}'>
+				<span>{{ Session::get("tax") }}円</span>
 			</div>
 			<div class="main-total-cart">
 				<h2>合計金額</h2>
-				<span>$total</span>
+				<input type="hidden" name="total" value='{"total": {{ Session::get("total") }}'>
+				<span>{{ Session::get("total") }}円</span>
 			</div>
 			<div class="checkout-cart">
-				<!-- 受取店舗 -->
-				<input type="hidden" name="store_id">
-				<!-- 時間情報 -->
-				<input type="hidden" name="time">
 				<!-- 合計金額 -->
 				<input type="hidden" name="total">
 				<button type="submit" class="cart-checkout-btn hover-btn">注文を確定する</button>
@@ -115,7 +114,7 @@
 	<script src="{{asset('/Frontend/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 	<script src="{{asset('/Frontend/vendor/OwlCarousel/owl.carousel.js')}}"></script>
 	<script src="{{asset('/Frontend/vendor/semantic/semantic.min.js')}}"></script>
-	<script src="{{asset('/Frontend/js/cart.js')}}"></script>
+	<!-- <script src="{{asset('/Frontend/js/cart.js')}}"></script> -->
 	<script src="{{asset('/Frontend/js/jquery.countdown.min.js')}}"></script>
 	<script src="{{asset('/Frontend/js/custom-cart.js')}}"></script>
 	<script src="{{asset('/Frontend/js/offset_overlay.js')}}"></script>

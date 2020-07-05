@@ -14,43 +14,46 @@ class CartSessionController extends Controller
 
     public function store(Request $request)
     {
-        // $carts = new Cart;
-        // $carts->item_id = $request->id;
-        // $carts->item_name = $request->item_name;
-        // $id = $request->id;
-        // return $id;
-
-
-
+        //カートの中身
         $items = $request->items;
-        // return $items;
-        // return var_dump($items);
-        // $items = array_chunk($items, 4);
-        // return var_dump($items);
-        // $arr = json_encode($items, JSON_UNESCAPED_UNICODE);
-        // return $arr;
-
-
         for ($i = 0; $i < count($items); $i++) {
             $arr = json_decode($items[$i], true);
+            $request->session()->put('id' . $i, $request->input('name', $arr['item_id']));
             $request->session()->put('name' . $i, $request->input('name', $arr['item_name']));
             $request->session()->put('price' . $i, $request->input('name', $arr['item_price']));
             // $request->session()->put('qty' . $i, $request->input('name', $arr['qty']));
         }
-        $count = count($items);
+        $count = count($items);//配列の数
         $request->session()->put('count', $count);
+        //消費税、合計金額
+        for ($i = 0; $i < $count; $i++) {
+            $tax = $arr['item_price'] * $count * 0.08;
+            $total = $arr['item_price'] * $count * 1.08;
+        }
 
-        // return var_dump($arr);
-        // return session()->all();
-        // return $arr['item_name'];
-        // return var_dump($arr['item_name']);
+        $request->session()->put('tax', $tax);//消費税
+        $request->session()->put('total', $total);//合計金額
         return view('/cart', ['count' => $count]);
     }
 
-    public function destroy(Request $request)
-    {
-        // return session()->all();
-        $request->session()->forget('count');
-        return view('/cart', ['count' => $count]);
-    }
+
+    //削除機能は一旦保留
+    // public function destroy(Request $request)
+    // {
+    //     // return session()->all();
+    //     // $items = $request->items;
+    //     // $data = $request->session()->all()->get();
+    //     // return var_dump($data);
+    //     // $data = $request->session()->all()->get();
+    //     $data = $request->session()->all()->get();
+    //     // return var_dump($data);
+    //     dd($data);
+    //     for($j = 0; $j < count($data); $j++){
+    //         $arr = json_decode($data[$j], true);
+    //         dd($data);
+    //         $request->session()->put('id' . $j, $request->input('name', $arr['item_id']));
+    //     }
+    //     $request->session()->forget('i');
+    //     return view('/cart');
+    // }
 }
