@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
         $this->call(UsualMenuItemsTableSeeder::class);
         $this->call(MCategoriesTableSeeder::class);
         $this->call(RecommendItemsTableSeeder::class);
+        $this->call(MStoresTableSeeder::class);
     }
 }

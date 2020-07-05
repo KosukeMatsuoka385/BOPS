@@ -21,7 +21,7 @@ Route::get("/tables_check_view_html",function(){
 });
 
 //checkout
-Route::get("/checkout", "CheckoutController@index");
+Route::post("/checkout", "CheckoutController@index");
 Route::post("/orderplaced", "CheckoutController@store");
 
 
