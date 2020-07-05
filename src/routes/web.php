@@ -45,6 +45,11 @@ Route::get("/select_store", function () {
 
 });
 
+//session
+Route::get("/cart", "CartSessionController@index");
+Route::post("/cart", "CartSessionController@store");
+Route::delete("/cart", "CartSessionController@destroy");
+
 //=======================================================================
 //index
 Route::get("item/", "ItemsController@index");
