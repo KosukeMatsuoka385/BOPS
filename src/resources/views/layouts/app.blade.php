@@ -391,13 +391,13 @@
 
                                             
                                             @guest
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a>
-                                                </li>
+                                                    
+                                                        <a class="nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a>
+                                                    
                                                 @if (Route::has('register'))
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" href="{{ route('register') }}">{{ __('新規登録') }}</a>
-                                                    </li>
+                                                        <div>
+                                                            <a class="nav-link item channel_item" href="{{ route('register') }}"><i class="uil uil-door-open">{{ __('新規登録') }}</i></a>
+                                                        </div>                                               
                                                 @endif
                                             {{-- ログインしている場合 --}}
                                             @else
@@ -408,7 +408,7 @@
 
                                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                                         <a class="dropdown-item" href="{{ route('logout') }}"
-                                                        onclick="event.preventDefault();
+                                                            onclick="event.preventDefault();
                                                                         document.getElementById('logout-form').submit();">
                                                             {{ __('Logout') }}
                                                         </a>
