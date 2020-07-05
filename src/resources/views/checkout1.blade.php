@@ -466,8 +466,7 @@
 				</div>
 			</div>
 		</div>
-	<form method="POST" action="{{url('/orderplaced')}}">
-	@csrf
+		
 		<div class="all-product-grid">
 			<div class="container">
 				<div class="row">
@@ -484,14 +483,45 @@
 								<div id="collapseOne" class="collapse in show" data-parent="#checkout_wizard">
 									<div class="checkout-step-body">
 										<p>お客様の電話番号（遅延などの際に連絡させて頂くことがあります）</p>	
+										<!-- <p class="phn145">4 digits code send your phone <span>+918437176189</span><a class="edit-no-btn hover-btn" data-toggle="collapse" href="#edit-number">Edit</a></p> -->
+										<!-- <div class="collapse" id="edit-number">
+											<div class="row">
+												<div class="col-lg-8">
+													<div class="checkout-login"> -->
+														
+															
 															<div class="login-phone">
-																<input type="text" class="form-control" placeholder="Phone Number" name="phone">
+																<input type="text" class="form-control" placeholder="Phone Number">
 															</div>
+															<!-- <a class="chck-btn hover-btn" role="button" data-toggle="collapse" href="#otp-verifaction" >Send Code</a> -->
+														
+													<!-- </div>
+												</div>
+											</div>
+										</div> -->
 										<div class="otp-verifaction">
 											<div class="row">
 												<div class="col-lg-12">
 													<div class="form-group mb-0">
-														
+														<!-- <label class="control-label">Enter Code</label>
+														<ul class="code-alrt-inputs">
+															<li>
+																<input id="code[1]" name="number" type="text" placeholder="" class="form-control input-md" required="">
+															</li>
+															<li>
+																<input id="code[2]" name="number" type="text" placeholder="" class="form-control input-md" required="">
+															</li>
+															<li>
+																<input id="code[3]" name="number" type="text" placeholder="" class="form-control input-md" required="">
+															</li>
+															<li>
+																<input id="code[4]" name="number" type="text" placeholder="" class="form-control input-md" required="">
+															</li>
+															<li>
+																<a class="collapsed chck-btn hover-btn" role="button" data-toggle="collapse" data-parent="#checkout_wizard" href="#collapseTwo">Next</a>
+															</li>
+														</ul>
+														<a href="#" class="resend-link">Resend Code</a> -->
 													</div>
 												</div>
 											</div>
@@ -511,22 +541,72 @@
 										<div class="checout-address-step">
 											<div class="row">
 												<div class="col-lg-12">												
-													
+													<!-- <form class=""> -->
+														<!-- Multiple Radios (inline) -->
+														<!-- <div class="form-group">
+															<div class="product-radio">
+																<ul class="product-now">
+																	<li>
+																		<input type="radio" id="ad1" name="address1" checked>
+																		<label for="ad1">Home</label>
+																	</li>
+																	<li>
+																		<input type="radio" id="ad2" name="address1">
+																		<label for="ad2">Office</label>
+																	</li>
+																	<li>
+																		<input type="radio" id="ad3" name="address1">
+																		<label for="ad3">Other</label>
+																	</li>
+																</ul>
+															</div>
+														</div> -->
 														<div class="address-fieldset">
 															<div class="row">
 																<div class="col-lg-6 col-md-12">
 																	
 																		<label class="control-label">店舗名</label>
-																		<input id="name" name="name" type="text" placeholder="Name" class="form-control input-md" required="" name="store_name">
+																		<input id="name" name="name" type="text" placeholder="Name" class="form-control input-md" required="">
 																	
 																</div>
 																<div class="col-lg-6 col-md-12">
 																	
 																		<label class="control-label">住所</label>
-																		<input id="email" name="email" type="text" placeholder="Address" class="form-control input-md" required="" name="store_address">
+																		<input id="email1" name="email1" type="text" placeholder="Address" class="form-control input-md" required="">
 																	
 																</div>
-																
+																<!-- <div class="col-lg-12 col-md-12">
+																	<div class="form-group">
+																		<label class="control-label">Flat / House / Office No.*</label>
+																		<input id="flat" name="flat" type="text" placeholder="Address" class="form-control input-md" required="">
+																	</div>
+																</div>
+																<div class="col-lg-12 col-md-12">
+																	<div class="form-group">
+																		<label class="control-label">Street / Society / Office Name*</label>
+																		<input id="street" name="street" type="text" placeholder="Street Address" class="form-control input-md">
+																	</div>
+																</div>
+																<div class="col-lg-6 col-md-12">
+																	<div class="form-group">
+																		<label class="control-label">Pincode*</label>
+																		<input id="pincode" name="pincode" type="text" placeholder="Pincode" class="form-control input-md" required="">
+																	</div>
+																</div>
+																<div class="col-lg-6 col-md-12">
+																	<div class="form-group">
+																		<label class="control-label">Locality*</label>
+																		<input id="Locality" name="locality" type="text" placeholder="Enter City" class="form-control input-md" required="">
+																	</div>
+																</div> -->
+																<!-- <div class="col-lg-12 col-md-12">
+																	<div class="form-group">
+																		<div class="address-btns">
+																			<button class="save-btn14 hover-btn">Save</button>
+																			<a class="collapsed ml-auto next-btn16 hover-btn" role="button" data-toggle="collapse" data-parent="#checkout_wizard" href="#collapseThree"> Next </a>
+																		</div>
+																	</div>
+																</div> -->
 															</div>
 														</div>
 													
@@ -549,19 +629,101 @@
 											<div class="col-md-12">
 												<div class="form-group">
 																	
-																		<input id="pick_time" name="pick_time" type="text" placeholder="Time" class="form-control input-md" required="">
+																		<input id="name" name="name" type="text" placeholder="Time" class="form-control input-md" required="">
 																	
+													<!-- <label class="control-label">Select Date and Time*</label>
+													<div class="date-slider-group">
+														<div class="owl-carousel date-slider owl-theme">
+															<div class="item">
+																<div class="date-now">
+																	<input type="radio" id="dd1" name="address1" checked="">
+																	<label for="dd1">Today</label>
+																</div>
+															</div>
+															<div class="item">
+																<div class="date-now">
+																	<input type="radio" id="dd2" name="address1">
+																	<label for="dd2">Tomorrow</label>
+																</div>
+															</div>
+															<div class="item">
+																<div class="date-now">
+																	<input type="radio" id="dd3" name="address1">
+																	<label for="dd3">10 May 2020</label>
+																</div>
+															</div>
+															<div class="item">
+																<div class="date-now">
+																	<input type="radio" id="dd4" name="address1">
+																	<label for="dd4">11 May 2020</label>
+																</div>
+															</div>
+															<div class="item">
+																<div class="date-now">
+																	<input type="radio" id="dd5" name="address1">
+																	<label for="dd5">12 May 2020</label>
+																</div>
+															</div>
+															<div class="item">
+																<div class="date-now">
+																	<input type="radio" id="dd6" name="address1">
+																	<label for="dd6">13 May 2020</label>
+																</div>
+															</div>
+															<div class="item">
+																<div class="date-now">
+																	<input type="radio" id="dd7" name="address1">
+																	<label for="dd7">14 May 2020</label>
+																</div>
+															</div>
+															<div class="item">
+																<div class="date-now">
+																	<input type="radio" id="dd8" name="address1">
+																	<label for="dd8">15 May 2020</label>
+																</div>
+															</div>
+														</div>
+													</div> -->
 													<div class="time-radio">
 														<div class="ui form">
 															<div class="grouped fields">
-																
+																<!-- <div class="field">
+																	<div class="ui radio checkbox chck-rdio">
+																		<input type="radio" name="fruit" checked="" tabindex="0" class="hidden">
+																		<label>8.00AM - 10.00AM</label>
+																	</div>
+																</div>
+																<div class="field">
+																	<div class="ui radio checkbox chck-rdio">
+																		<input type="radio" name="fruit" tabindex="0" class="hidden">
+																		<label>10.00AM - 12.00PM</label>
+																	</div>
+																</div>
+																<div class="field">
+																	<div class="ui radio checkbox chck-rdio">
+																		<input type="radio" name="fruit" tabindex="0" class="hidden">
+																		<label>12.00PM - 2.00PM</label>
+																	</div>
+																</div>
+																<div class="field">
+																	<div class="ui radio checkbox chck-rdio">
+																		<input type="radio" name="fruit" tabindex="0" class="hidden">
+																		<label>2.00PM - 4.00PM</label>
+																	</div>
+																</div>
+																<div class="field">
+																	<div class="ui radio checkbox chck-rdio">
+																		<input type="radio" name="fruit" tabindex="0" class="hidden">
+																		<label>4.00PM - 6.00PM</label>
+																	</div>
+																</div> -->
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										
+										<!-- <a class="collapsed next-btn16 hover-btn" role="button" data-toggle="collapse"  href="#collapseFour"> Proccess to payment </a> -->
 									</div>
 								</div>
 							</div>
@@ -615,7 +777,7 @@
 																	<label class="control-label">名前*</label>
 																	<div class="ui search focus">
 																		<div class="ui left icon input swdh11 swdh19">
-																			<input class="prompt srch_explore" type="text" name="credit_name" value="" id="holder[name]" required="" maxlength="64" placeholder="Holder Name">															
+																			<input class="prompt srch_explore" type="text" name="holdername" value="" id="holder[name]" required="" maxlength="64" placeholder="Holder Name">															
 																		</div>
 																	</div>
 																</div>
@@ -625,7 +787,7 @@
 																	<label class="control-label">カード番号*</label>
 																	<div class="ui search focus">
 																		<div class="ui left icon input swdh11 swdh19">
-																			<input class="prompt srch_explore" type="text" name="credit_number" value="" id="card[number]" required="" maxlength="64" placeholder="Card Number">															
+																			<input class="prompt srch_explore" type="text" name="cardnumber" value="" id="card[number]" required="" maxlength="64" placeholder="Card Number">															
 																		</div>
 																	</div>
 																</div>
@@ -633,7 +795,7 @@
 															<div class="col-lg-4">
 																<div class="form-group mt-1">																	
 																	<label class="control-label">有効期限月*</label>
-																	<select class="ui fluid search dropdown form-dropdown" name="credit_exmonth">
+																	<select class="ui fluid search dropdown form-dropdown" name="card[expire-month]">
 																		<option value="">Month</option>
 																		<option value="1">January</option>
 																		<option value="2">February</option>
@@ -655,7 +817,7 @@
 																	<label class="control-label">有効期限年*</label>
 																	<div class="ui search focus">
 																		<div class="ui left icon input swdh11 swdh19">
-																			<input class="prompt srch_explore" type="text" name="credit_exyear" maxlength="4" placeholder="Year">															
+																			<input class="prompt srch_explore" type="text" name="card[expire-year]" maxlength="4" placeholder="Year">															
 																		</div>
 																	</div>
 																</div>
@@ -665,16 +827,17 @@
 																	<label class="control-label">CVV*</label>
 																	<div class="ui search focus">
 																		<div class="ui left icon input swdh11 swdh19">
-																			<input class="prompt srch_explore" name="credit_cvv" maxlength="3" placeholder="CVV">															
+																			<input class="prompt srch_explore" name="card[cvc]" maxlength="3" placeholder="CVV">															
 																		</div>
 																	</div>
 																</div>
 															</div>
 														</div>
 													</div>
-													
+													<form method="POST" action="{{url('/orderplaced')}}">
+													@csrf
 													<button class="next-btn16 hover-btn" type="submit">注文を確定</button>
-													
+													</form>	
 												</div>
 											</div>
 										</div>
@@ -685,17 +848,55 @@
 					</div>
 					<div class="col-lg-4 col-md-5">
 						<div class="pdpt-bg mt-0">
-							
+							<!-- <div class="pdpt-title">
+								<h4>合計金額</h4>
+							</div> -->
+							<!-- <div class="right-cart-dt-body">
+								<div class="cart-item border_radius">
+									<div class="cart-product-img">
+										<img src="images/product/img-11.jpg" alt="">
+										<div class="offer-badge">4% OFF</div>
+									</div>
+									<div class="cart-text">
+										<h4>Product Title Here</h4>
+										<div class="cart-item-price">$15 <span>$18</span></div>
+										<button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button>
+									</div>		
+								</div>
+							</div>
+							<div class="total-checkout-group">
+								<div class="cart-total-dil">
+									<h4>Gambo Super Market</h4>
+									<span>$15</span>
+								</div>
+								<div class="cart-total-dil pt-3">
+									<h4>Delivery Charges</h4>
+									<span>$1</span>
+								</div>
+							</div>
+							<div class="cart-total-dil saving-total ">
+								<h4>Total Saving</h4>
+								<span>$3</span>
+							</div> -->
 							<div class="main-total-cart">
 								<h2>合計金額</h2>
 								<span>1000円</span>
 							</div>
-                        </div>	
+							<!-- <div class="payment-secure">
+								<i class="uil uil-padlock"></i>Secure checkout
+							</div>
+						</div>
+						<a href="#" class="promo-link45">Have a promocode?</a>
+						<div class="checkout-safety-alerts">
+							<p><i class="uil uil-sync"></i>100% Replacement Guarantee</p>
+							<p><i class="uil uil-check-square"></i>100% Genuine Products</p>
+							<p><i class="uil uil-shield-check"></i>Secure Payments</p>
+						</div> -->
 					</div>
 				</div>
 			</div>
 		</div>
-		</form>	
+		
 	</div>
 	<!-- Body End -->
 	<!-- Footer Start -->
@@ -807,7 +1008,7 @@
 						<div class="second-row-item-payment">
 							<h4>Newsletter</h4>
 							<div class="newsletter-input">
-								<input id="email2" name="email2" type="text" placeholder="Email Address" class="form-control input-md" required="">
+								<input id="email" name="email" type="text" placeholder="Email Address" class="form-control input-md" required="">
 								<button class="newsletter-btn hover-btn" type="submit"><i class="uil uil-telegram-alt"></i></button>
 							</div>
 						</div>
