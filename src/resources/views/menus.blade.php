@@ -23,7 +23,7 @@
 											<div class="top-text-1">Buy More & Save More</div>
 											<span>Fresh Vegetables</span>
 										</div> --}}
-										<a href="#" class="Offer-shop-btn hover-btn"><input type="checkbox"  name="items[]" value="{{ json_encode($recommend_item,JSON_UNESCAPED_UNICODE) }}">{{ $recommend_item->item_price }}</a>
+										<a href="#" class="Offer-shop-btn hover-btn"><input type="checkbox"  name="items[]" value="{{ json_encode($recommend_item,JSON_UNESCAPED_UNICODE) }}">{{ $recommend_item->item_price }}円</a>
 									</div>
 								</div>
 							</div>
@@ -70,7 +70,6 @@
 											@foreach($category_items as $category_item)
 											@if ($category_item->category_id == $category->id)
 											<li>
-												{{-- TODO: メニューチェック時にすべてにチェック --}}
 												<input type="checkbox" name="items[]" value='{{ json_encode($category_item,JSON_UNESCAPED_UNICODE) }}'>
 												{{-- <input type="checkbox" name="items[]" value='{{ $umenu_item }}'> --}}
 												<a href="#">{{ $category_item->item_name }}</a>
