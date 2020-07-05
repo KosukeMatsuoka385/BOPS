@@ -7,7 +7,7 @@ use Auth;
 use Validate;
 use DB;
 use App\UsualMenu;
-    
+
     //=======================================================================
     class UsualMenusController extends Controller
     {
@@ -20,9 +20,9 @@ use App\UsualMenu;
         {
             $keyword = $request->get("search");
             $perPage = 25;
-    
+
             if (!empty($keyword)) {
-                
+
 				// ----------------------------------------------------
 				// -- QueryBuilder: SELECT [usual_menus]--
 				// ----------------------------------------------------
@@ -36,11 +36,11 @@ use App\UsualMenu;
 				// ----------------------------------------------------
 				$usual_menu = DB::table("usual_menus")
 				->leftJoin("users","users.id", "=", "usual_menus.user_id")
-				->select("*")->addSelect("usual_menus.id")->paginate($perPage);              
-            }          
+				->select("*")->addSelect("usual_menus.id")->paginate($perPage);
+            }
             return view("usual_menu.index", compact("usual_menu"));
         }
-    
+
         /**
          * Show the form for creating a new resource.
          *
@@ -50,7 +50,7 @@ use App\UsualMenu;
         {
             return view("usual_menu.create");
         }
-    
+
         /**
          * Store a newly created resource in storage.
          *
@@ -67,12 +67,12 @@ use App\UsualMenu;
 
             ]);
             $requestData = $request->all();
-            
+
             UsualMenu::create($requestData);
-    
+
             return redirect("usual_menu")->with("flash_message", "usual_menu added!");
         }
-    
+
         /**
          * Display the specified resource.
          *
@@ -83,7 +83,7 @@ use App\UsualMenu;
         public function show($id)
         {
             //$usual_menu = UsualMenu::findOrFail($id);
-            
+
 				// ----------------------------------------------------
 				// -- QueryBuilder: SELECT [usual_menus]--
 				// ----------------------------------------------------
@@ -92,7 +92,7 @@ use App\UsualMenu;
 				->select("*")->addSelect("usual_menus.id")->where("usual_menus.id",$id)->first();
             return view("usual_menu.show", compact("usual_menu"));
         }
-    
+
         /**
          * Show the form for editing the specified resource.
          *
@@ -103,10 +103,10 @@ use App\UsualMenu;
         public function edit($id)
         {
             $usual_menu = UsualMenu::findOrFail($id);
-    
+
             return view("usual_menu.edit", compact("usual_menu"));
         }
-    
+
         /**
          * Update the specified resource in storage.
          *
@@ -124,13 +124,13 @@ use App\UsualMenu;
 
             ]);
             $requestData = $request->all();
-            
+
             $usual_menu = UsualMenu::findOrFail($id);
             $usual_menu->update($requestData);
-    
+
             return redirect("usual_menu")->with("flash_message", "usual_menu updated!");
         }
-    
+
         /**
          * Remove the specified resource from storage.
          *
@@ -141,10 +141,8 @@ use App\UsualMenu;
         public function destroy($id)
         {
             UsualMenu::destroy($id);
-    
+
             return redirect("usual_menu")->with("flash_message", "usual_menu deleted!");
         }
     }
     //=======================================================================
-    
-    

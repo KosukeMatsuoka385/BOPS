@@ -7,7 +7,7 @@ use Auth;
 use Validate;
 use DB;
 use App\Item;
-    
+
     //=======================================================================
     class ItemsController extends Controller
     {
@@ -20,9 +20,9 @@ use App\Item;
         {
             $keyword = $request->get("search");
             $perPage = 25;
-    
+
             if (!empty($keyword)) {
-                
+
 				// ----------------------------------------------------
 				// -- QueryBuilder: SELECT [items]--
 				// ----------------------------------------------------
@@ -36,13 +36,14 @@ use App\Item;
 				// -- QueryBuilder: SELECT [items]--
 				// ----------------------------------------------------
 				$item = DB::table("items")
-				->leftJoin("m_categories","m_categories.id", "=", "items.category_id")
+				// ->leftJoin("m_categories","m_categories.id", "=", "items.category_id")
 				->leftJoin("m_stores","m_stores.id", "=", "items.store_id")
-				->select("*")->addSelect("items.id")->paginate($perPage);              
-            }          
+                ->select("*")->addSelect("items.id")->paginate($perPage);
+                ;
+            }
             return view("item.index", compact("item"));
         }
-    
+
         /**
          * Show the form for creating a new resource.
          *
@@ -52,7 +53,7 @@ use App\Item;
         {
             return view("item.create");
         }
-    
+
         /**
          * Store a newly created resource in storage.
          *
@@ -75,12 +76,12 @@ use App\Item;
 
             ]);
             $requestData = $request->all();
-            
+
             Item::create($requestData);
-    
+
             return redirect("item")->with("flash_message", "item added!");
         }
-    
+
         /**
          * Display the specified resource.
          *
@@ -91,7 +92,7 @@ use App\Item;
         public function show($id)
         {
             //$item = Item::findOrFail($id);
-            
+
 				// ----------------------------------------------------
 				// -- QueryBuilder: SELECT [items]--
 				// ----------------------------------------------------
@@ -101,7 +102,7 @@ use App\Item;
 				->select("*")->addSelect("items.id")->where("items.id",$id)->first();
             return view("item.show", compact("item"));
         }
-    
+
         /**
          * Show the form for editing the specified resource.
          *
@@ -112,10 +113,10 @@ use App\Item;
         public function edit($id)
         {
             $item = Item::findOrFail($id);
-    
+
             return view("item.edit", compact("item"));
         }
-    
+
         /**
          * Update the specified resource in storage.
          *
@@ -139,13 +140,13 @@ use App\Item;
 
             ]);
             $requestData = $request->all();
-            
+
             $item = Item::findOrFail($id);
             $item->update($requestData);
-    
+
             return redirect("item")->with("flash_message", "item updated!");
         }
-    
+
         /**
          * Remove the specified resource from storage.
          *
@@ -156,10 +157,8 @@ use App\Item;
         public function destroy($id)
         {
             Item::destroy($id);
-    
+
             return redirect("item")->with("flash_message", "item deleted!");
         }
     }
     //=======================================================================
-    
-    

@@ -1,0 +1,26 @@
+[
+    {
+        "item_id": 1,
+        "item_name": "豚肉",
+        "item_price": 390,
+        "qty": 1
+    },
+    {
+        "item_id": 2,
+        "item_name": "じゃがいも",
+        "item_price": 100,
+        "qty": 1
+    },
+    {
+        "item_id": 3,
+        "item_name": "にんじん",
+        "item_price": 100,
+        "qty": 1
+    },
+    {
+        "item_id": 4,
+        "item_name": "玉ねぎ",
+        "item_price": 350,
+        "qty": 1
+    }
+]

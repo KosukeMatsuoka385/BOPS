@@ -15,13 +15,14 @@
                                         {{ method_field("delete") }}
                                         <button type="submit" class="btn btn-danger btn-xs" title="Delete User" onclick="return confirm('Confirm delete')">
                                         Delete
-                                        </button>    
+                                        </button>
                             </form>
                             <br/>
                             <br/>
                             <div class="table-responsive">
                                 <table class="table table-borderless">
                                     <tbody>
+										<tr><th>id</th><td>{{var_dump($item)}} </td></tr>
 										<tr><th>id</th><td>{{$item->id}} </td></tr>
 										<tr><th>name</th><td>{{$item->name}} </td></tr>
 										<tr><th>category_id</th><td>{{$item->category_id}} </td></tr>
@@ -47,4 +48,3 @@
                 </div>
             </div>
         @endsection
-    

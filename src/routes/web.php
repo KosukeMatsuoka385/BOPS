@@ -1,17 +1,19 @@
 <?php
 use Illuminate\Http\Response;
 
+// 追加
+use Illuminate\Http\Request;
+
 //default
 Route::get("/", function () {
-    // return view("welcome");
     return view("gambo");
 });
 
-//default
 Route::get("/laradb", function () {
     return view("welcome");
-
 });
+
+Route::get("/menus", "MenusController@show");
 
 //Demo (Delete after site publish.)
 Route::get("/tables_check_view_html",function(){

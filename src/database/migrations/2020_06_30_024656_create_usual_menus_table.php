@@ -2,7 +2,7 @@
             use Illuminate\Support\Facades\Schema;
             use Illuminate\Database\Schema\Blueprint;
             use Illuminate\Database\Migrations\Migration;
-            
+
             class CreateUsualMenusTable extends Migration
             {
                 /**
@@ -15,7 +15,7 @@
                     Schema::create("usual_menus", function (Blueprint $table) {
 						$table->increments('id')->unsigned();
 						$table->string('name');
-						$table->string('image');
+						$table->string('img');
 						$table->integer('user_id')->unsigned();
 						$table->timestamps();
 						$table->softDeletes();
@@ -35,7 +35,7 @@
 
                     });
                 }
-    
+
                 /**
                  * Reverse the migrations.
                  *
@@ -46,4 +46,3 @@
                     Schema::dropIfExists("usual_menus");
                 }
             }
-        
