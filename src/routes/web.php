@@ -19,10 +19,9 @@ Route::get("/tables_check_view_html",function(){
 });
 
 //checkout
-Route::get("/checkout",function(){
-    return view("checkout");
-});
-// Route::get("/checkout", "CheckoutController@checkout");
+Route::get("/checkout", "CheckoutController@index");
+Route::post("/orderplaced", "CheckoutController@store");
+
 
 //orderplaced
 Route::get("/orderplaced",function(){

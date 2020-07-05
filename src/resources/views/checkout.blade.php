@@ -466,6 +466,7 @@
 				</div>
 			</div>
 		</div>
+		
 		<div class="all-product-grid">
 			<div class="container">
 				<div class="row">
@@ -478,21 +479,22 @@
 										<button class="wizard-btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> 電話番号確認</button>
 									</h4>
 								</div>
+								
 								<div id="collapseOne" class="collapse in show" data-parent="#checkout_wizard">
 									<div class="checkout-step-body">
-										<p>遅延などの際に連絡させて頂くことがありますので電話番号を教えて下さい</p>	
+										<p>お客様の電話番号（遅延などの際に連絡させて頂くことがあります）</p>	
 										<!-- <p class="phn145">4 digits code send your phone <span>+918437176189</span><a class="edit-no-btn hover-btn" data-toggle="collapse" href="#edit-number">Edit</a></p> -->
 										<!-- <div class="collapse" id="edit-number">
 											<div class="row">
 												<div class="col-lg-8">
 													<div class="checkout-login"> -->
-														<form>
-															@csrf
+														
+															
 															<div class="login-phone">
 																<input type="text" class="form-control" placeholder="Phone Number">
 															</div>
 															<!-- <a class="chck-btn hover-btn" role="button" data-toggle="collapse" href="#otp-verifaction" >Send Code</a> -->
-														</form>
+														
 													<!-- </div>
 												</div>
 											</div>
@@ -539,10 +541,10 @@
 										<div class="checout-address-step">
 											<div class="row">
 												<div class="col-lg-12">												
-													<form class="">
+													<!-- <form class=""> -->
 														<!-- Multiple Radios (inline) -->
-														<div class="form-group">
-															<!-- <div class="product-radio">
+														<!-- <div class="form-group">
+															<div class="product-radio">
 																<ul class="product-now">
 																	<li>
 																		<input type="radio" id="ad1" name="address1" checked>
@@ -557,21 +559,21 @@
 																		<label for="ad3">Other</label>
 																	</li>
 																</ul>
-															</div> -->
-														</div>
+															</div>
+														</div> -->
 														<div class="address-fieldset">
 															<div class="row">
 																<div class="col-lg-6 col-md-12">
-																	<div class="form-group">
+																	
 																		<label class="control-label">店舗名</label>
 																		<input id="name" name="name" type="text" placeholder="Name" class="form-control input-md" required="">
-																	</div>
+																	
 																</div>
 																<div class="col-lg-6 col-md-12">
-																	<div class="form-group">
+																	
 																		<label class="control-label">住所</label>
 																		<input id="email1" name="email1" type="text" placeholder="Address" class="form-control input-md" required="">
-																	</div>
+																	
 																</div>
 																<!-- <div class="col-lg-12 col-md-12">
 																	<div class="form-group">
@@ -607,7 +609,7 @@
 																</div> -->
 															</div>
 														</div>
-													</form>
+													
 												</div>
 											</div>
 										</div>
@@ -626,6 +628,9 @@
 										<div class="row">
 											<div class="col-md-12">
 												<div class="form-group">
+																	
+																		<input id="name" name="name" type="text" placeholder="Time" class="form-control input-md" required="">
+																	
 													<!-- <label class="control-label">Select Date and Time*</label>
 													<div class="date-slider-group">
 														<div class="owl-carousel date-slider owl-theme">
@@ -682,7 +687,7 @@
 													<div class="time-radio">
 														<div class="ui form">
 															<div class="grouped fields">
-																<div class="field">
+																<!-- <div class="field">
 																	<div class="ui radio checkbox chck-rdio">
 																		<input type="radio" name="fruit" checked="" tabindex="0" class="hidden">
 																		<label>8.00AM - 10.00AM</label>
@@ -711,7 +716,7 @@
 																		<input type="radio" name="fruit" tabindex="0" class="hidden">
 																		<label>4.00PM - 6.00PM</label>
 																	</div>
-																</div>
+																</div> -->
 															</div>
 														</div>
 													</div>
@@ -829,9 +834,10 @@
 															</div>
 														</div>
 													</div>
-								
-													<a href="#" class="next-btn16 hover-btn">注文を確定</a>
-													
+													<form method="POST" action="{{url('/orderplaced')}}">
+		@csrf
+													<button class="next-btn16 hover-btn" type="submit">注文を確定</button>
+													</form>	
 												</div>
 											</div>
 										</div>
@@ -889,7 +895,8 @@
 					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
+		
 	</div>
 	<!-- Body End -->
 	<!-- Footer Start -->

@@ -10,42 +10,62 @@ use DB;
 use App\User;
 use App\Order;
 use App\OrderDetail;
-use App\Item;
 // use Illuminate\Support\Facades\DB;
 
 
 class CheckoutController extends Controller
 {
-
-    public function checkout(Request $request)
+    public function index()
     {
-        $content = new Content;
-        //usersテーブルに電話番号を登録
-        // DB::table('users')->insert([
-        //     'phone' => '1234',
-        // ]); 
+        return view('checkout');
+    }
+
+    public function store(Request $request)
+    {
+        //usersテーブルに電話番号、クレカ情報を登録（クレカは余裕があればstripe連携）
+        $user = new User; //user特定必要
+        $user->user_id = Auth::user()->id;
+        $user->phone = $request->phone;
+        $user->credit_name = $request->credit_name;
+        $user->credit_number = $request->credit_number;
+        $user->credit_exmonth = $request->credit_exmonth;
+        $user->credit_exyear = $request->credit_exyear;
+        $user->credit_cvv = $request->credit_cvv;
+        $user->save();
+
         
         //ordersテーブルに以下情報を登録
-        // DB::table('orders')->insert([
-        //     'store_name' => '',
-        //     'subtotal' => '',
-        //     'tax' => '',
-        //     'discount' => '',
-        //     'total' => '',
-        //     'paid' => '',
-        //     'payment_type' => '',
-        //     'status' => '注文受付',
-        //     'receive_time' => '',
-        // ]);
+        $order = new Order;
+        $date = new Carbon(Carbon::now());
+        $store_name = session('store_name','default');
+        $subtotal = session('subtotal','default');
+        $tax = session('tax',$subtotal*0.08);
+        $discount = session('discount',0);
+        $total = session('total','default');
+        $paid = session('paid',$total);
+        $receive_time = session('receive_time','default');
 
-        // //order_detailsテーブルに以下情報を登録
-        // DB::table('order_details')->insert([
-        //     'item_name' => '',
-        //     'price' => '',
-        //     'qty' => '',
-        // ]);
+        $order->store_name = $store_name;//テーブルにstore_name追加必要
+        $order->date = $date;
+        $order->subtotal = $subtotal;
+        $order->tax = $tax;
+        $order->discount = $discount;
+        $order->total = $total;
+        $order->paid = $paid;
+        $order->payment_type = $request->payment_type;
+        $order->status = '注文受付';
+        $order->receive_time = $receive_time;
+        $order->save();
 
-        $content->save();
+        //order_detailsテーブルに以下情報を登録
+        $order_detail = new OrderDetail;
+        $item_id = session('item_id','default');
+        $qty = session('qty','default');
+
+        $order_detail->order_id = $order->id;//?? 
+        $order_detail->item_id = $item_id;
+        $order_detail->qty = $qty;
+        $order_detail->save();
 
         //次の画面であるorderplacedに遷移
         return view('orderplaced');

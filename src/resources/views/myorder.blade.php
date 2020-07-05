@@ -550,7 +550,7 @@
 												<h4>注文状況</h4>
 												<div class="bs-wizard" style="border-bottom:0;">   
 													<div class="bs-wizard-step active">
-														<div class="text-center bs-wizard-stepnum">受注</div>
+														<div class="text-center bs-wizard-stepnum">注文受付</div>
 														<div class="progress"><div class="progress-bar"></div></div>
 														<a href="#" class="bs-wizard-dot"></a>
 													</div>
@@ -565,7 +565,7 @@
 														<a href="#" class="bs-wizard-dot"></a>
 													</div>
 													<div class="bs-wizard-step disabled"><!-- active -->
-														<div class="text-center bs-wizard-stepnum">受渡し完了</div>
+														<div class="text-center bs-wizard-stepnum">受け渡し済</div>
 														<div class="progress"><div class="progress-bar"></div></div>
 														<a href="#" class="bs-wizard-dot"></a>
 													</div>
