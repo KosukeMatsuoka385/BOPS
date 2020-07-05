@@ -616,7 +616,10 @@
 						?>
 
 				</table>
-
+				<br>
+				<div class="card-body text-right">
+					<button type="submit" href="#" class="btn btn-primary hover-btn" style="padding: 10px 20px;">選択する</button>
+				</div>
 			</form>
 		
 		</div>
