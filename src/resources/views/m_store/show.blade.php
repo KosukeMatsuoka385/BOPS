@@ -25,7 +25,15 @@
 										<tr><th>id</th><td>{{$m_store->id}} </td></tr>
 										<tr><th>name</th><td>{{$m_store->name}} </td></tr>
 										<tr><th>store_group_id</th><td>{{$m_store->store_group_id}} </td></tr>
+										<tr><th>address</th><td>{{$m_store->address}} </td></tr>
+										<tr><th>tel</th><td>{{$m_store->tel}} </td></tr>
+										<tr><th>open_time</th><td>{{$m_store->open_time}} </td></tr>
+										<tr><th>close_time</th><td>{{$m_store->close_time}} </td></tr>
+										<tr><th>appearance_img</th><td>{{$m_store->appearance_img}} </td></tr>
+										<tr><th>store_url</th><td>{{$m_store->store_url}} </td></tr>
+										<tr><th>map_url</th><td>{{$m_store->map_url}} </td></tr>
 										<tr><th>name</th><td>{{$m_store->name}} </td></tr>
+										<tr><th>logo_img</th><td>{{$m_store->logo_img}} </td></tr>
 
                                         </tbody>
                                     </table>

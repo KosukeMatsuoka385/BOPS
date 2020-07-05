@@ -27,6 +27,15 @@ class CreateUsersTable extends Migration
             $table->integer('credit_cvv')->nullable();
             $table->rememberToken();
             $table->timestamps();
+
+
+
+            // ----------------------------------------------------
+            // -- SELECT [users]--
+            // ----------------------------------------------------
+            // $query = DB::table("users")
+            // ->get();
+            // dd($query); //For checking
         });
     }
 

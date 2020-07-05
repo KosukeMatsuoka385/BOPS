@@ -10,7 +10,7 @@ Route::get("/", function () {
 //default
 Route::get("/laradb", function () {
     return view("welcome");
-    // return view("gambo");
+
 });
 
 //Demo (Delete after site publish.)
@@ -33,6 +33,15 @@ Route::get("/myorder",function(){
     return view("myorder");
 });
 
+
+Route::get("/pick_time_table", function () {
+    return view("pick_time_table");
+});
+
+Route::get("/select_store", function () {
+    return view("select_store");
+
+});
 
 //=======================================================================
 //index

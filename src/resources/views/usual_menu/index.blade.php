@@ -32,7 +32,7 @@
                                 <div class="table-responsive">
                                     <table class="table table-borderless">
                                         <thead>
-                                            <tr><th>id</th><th>name</th><th>image</th><th>user_id</th><th>name</th><th>email</th><th>password</th><th>phone</th><th>credit_name</th><th>credit_number</th><th>credit_exmonth</th><th>credit_exyear</th><th>credit_cvv</th></tr>
+                                            <tr><th>id</th><th>name</th><th>img</th><th>user_id</th><th>name</th><th>email</th><th>password</th><th>phone</th><th>credit_name</th><th>credit_number</th><th>credit_exmonth</th><th>credit_exyear</th><th>credit_cvv</th></tr>
                                         </thead>
                                         <tbody>
                                         @foreach($usual_menu as $item)
@@ -43,7 +43,7 @@
 
                                             <td>{{ $item->name}} </td>
 
-                                            <td>{{ $item->image}} </td>
+                                            <td>{{ $item->img}} </td>
 
                                             <td>{{ $item->user_id}} </td>
 

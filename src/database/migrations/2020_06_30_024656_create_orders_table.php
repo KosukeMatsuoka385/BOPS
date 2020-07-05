@@ -22,7 +22,8 @@
 						$table->integer('paid')->unsigned();
 						$table->integer('payment_type');
 						$table->integer('status');
-						$table->dateTime('receive_time');
+						$table->string('pick_time');
+						$table->integer('store_id')->nullable()->unsigned();
 						$table->timestamps();
 						$table->softDeletes();
 						//$table->foreign("id")->references("id")->on("users");
