@@ -6,7 +6,8 @@ Night Mood
     display: inline-block;
     height: 18px;
     width: 37px;
-    top: 35%;
+    /* top: 35%; */
+    top: 8px;
     right: 13px;
     position: absolute;
 }
@@ -21,7 +22,7 @@ Night Mood
     bottom: 0;
     cursor: pointer;
     transition-property: background-color;
-    transition-duration: .2s;
+    transition-duration: .1s;
     box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.07);
 }
 
@@ -50,8 +51,8 @@ Night Mood
 }
 
 
-.night-mode html , 
-.night-mode body , 
+.night-mode html ,
+.night-mode body ,
 .night-mode .main_content ,
 .night-mode .bg-gradient-warning  ,
 .night-mode .sidebar ,
@@ -324,7 +325,7 @@ Night Mood
 
 
 
- /* all theme custom cards */ 
+ /* all theme custom cards */
 .night-mode .nav-single-group ,
 .night-mode .setting-menu ,
 .night-mode .group-card ,
@@ -346,7 +347,7 @@ Night Mood
  .night-mode #logo .logo-inverse{
       display:inline !important
   }
- 
+
 /* Titles & texts */
 .night-mode h1, .night-mode h2, .night-mode h3, .night-mode h4, .night-mode h5, .night-mode h6 {
     color: #fff !important;
@@ -868,7 +869,7 @@ Night Mood
     border-bottom: 0;
 }
 
-.night-mode .user-item:hover { 
+.night-mode .user-item:hover {
 	color: #fff;
     background:#242424;
 }
