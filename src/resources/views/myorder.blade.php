@@ -478,8 +478,8 @@
 									<label for="file"><i class="uil uil-camera-plus"></i></label>
 								</div>
 							</div>
-							<h4>Johe Doe</h4>
-							<p>+91999999999<a href="#"><i class="uil uil-edit"></i></a></p>
+							<h4>{{$user->name}}</h4>
+							<p>{{$user->phone}}<a href="#"><i class="uil uil-edit"></i></a></p>
 							<div class="earn-points"><img src="{{ asset('/Frontend/images/Dollar.svg')}}" alt="">Points : <span>20</span></div>
 						</div>
 					</div>
@@ -489,19 +489,7 @@
 		<div class="">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-3 col-md-4">
-						<div class="left-side-tabs">
-							<div class="dashboard-left-links">
-								<a href="dashboard_overview.html" class="user-item"><i class="uil uil-apps"></i>Overview</a>
-								<a href="dashboard_my_orders.html" class="user-item active"><i class="uil uil-box"></i>My Orders</a>
-								<a href="dashboard_my_rewards.html" class="user-item"><i class="uil uil-gift"></i>My Rewards</a>
-								<a href="dashboard_my_wallet.html" class="user-item"><i class="uil uil-wallet"></i>My Wallet</a>
-								<a href="dashboard_my_wishlist.html" class="user-item"><i class="uil uil-heart"></i>Shopping Wishlist</a>
-								<a href="dashboard_my_addresses.html" class="user-item"><i class="uil uil-location-point"></i>My Address</a>
-								<a href="sign_in.html" class="user-item"><i class="uil uil-exit"></i>Logout</a>
-							</div>
-						</div>
-					</div>
+					
 					<div class="col-lg-9 col-md-8">
 						<div class="dashboard-right">
 							<div class="row">
@@ -513,7 +501,7 @@
 								<div class="col-lg-12 col-md-12">
 									<div class="pdpt-bg">
 										<div class="pdpt-title">
-											<h6>お受け取り予定時間 7月1日, 5.00PM</h6>
+											<h6>お受け取り予定時間 {{$my_order->order_pick_time}}</h6>
 										</div> 
 										<div class="order-body10">
 											<ul class="order-dtsll">
@@ -524,9 +512,9 @@
 												</li>
 												<li>
 													<div class="order-dt47">
-														<h4>成城石井　五反田店</h4>
-														<p></p>
-														<div class="order-title">2 商品 <span data-inverted="" data-tooltip="2kg broccoli, 1kg Apple" data-position="top center">?</span></div>
+														<h4>{{$my_order->order_store_name}</h4>
+														<p>{{$my_order->order_store_tel}}</p>
+														<div class="order-title">購入詳細 <span data-inverted="" data-tooltip="詳細" data-position="top center">?</span></div>
 													</div>
 												</li>
 											</ul>
@@ -543,7 +531,7 @@
 												</div> -->
 												<div class="main-total-cart">
 													<h2>合計金額</h2>
-													<span>1000円</span>
+													<span>{{$my_order->order_total}}</span>
 												</div>
 											</div>
 											<div class="track-order">
@@ -587,6 +575,20 @@
 									</div>
 	
 								</div>								
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-4">
+						<div class="left-side-tabs">
+							<div class="dashboard-left-links">
+								<a href="dashboard_overview.html" class="user-item"><i class="uil uil-apps"></i>Overview</a>
+								<a href="dashboard_my_orders.html" class="user-item active"><i class="uil uil-box"></i>My Orders</a>
+								<a href="dashboard_my_rewards.html" class="user-item"><i class="uil uil-gift"></i>My Rewards</a>
+								<a href="dashboard_my_wallet.html" class="user-item"><i class="uil uil-wallet"></i>My Wallet</a>
+								<a href="dashboard_my_wishlist.html" class="user-item"><i class="uil uil-heart"></i>Shopping Wishlist</a>
+								<a href="dashboard_my_addresses.html" class="user-item"><i class="uil uil-location-point"></i>My Address</a>
+								<a href="sign_in.html" class="user-item"><i class="uil uil-exit"></i>Logout</a>
 							</div>
 						</div>
 					</div>

@@ -485,7 +485,7 @@
 									<div class="checkout-step-body">
 										<p>お客様の電話番号（遅延などの際に連絡させて頂くことがあります）</p>	
 															<div class="login-phone">
-																<input type="text" class="form-control" placeholder="Phone Number" name="phone">
+																<input type="text" class="form-control" placeholder="Phone Number" name="phone" value="">
 															</div>
 										<div class="otp-verifaction">
 											<div class="row">
@@ -517,14 +517,14 @@
 																<div class="col-lg-6 col-md-12">
 																	
 																		<label class="control-label">店舗名</label>
-																		<input id="name" name="name" type="text" placeholder="Name" class="form-control input-md" required="" name="store_name">
-																	
+																		<!-- <input id="name" name="" type="text" placeholder="Name" class="form-control input-md" required="" name="{{ Session::get('store_name') }}"> -->
+																		{{ Session::get('store_name') }}
 																</div>
 																<div class="col-lg-6 col-md-12">
 																	
 																		<label class="control-label">住所</label>
-																		<input id="email" name="email" type="text" placeholder="Address" class="form-control input-md" required="" name="store_address">
-																	
+																		<!-- <input id="email" name="email" type="text" placeholder="Address" class="form-control input-md" required="" name="{{ Session::get('store_address') }}"> -->
+																		{{ Session::get('store_address') }}
 																</div>
 																
 															</div>
@@ -549,8 +549,8 @@
 											<div class="col-md-12">
 												<div class="form-group">
 																	
-																		<input id="pick_time" name="pick_time" type="text" placeholder="Time" class="form-control input-md" required="">
-																	
+																		<!-- <input id="pick_time" name="{{ Session::get('pick_time') }}" type="text" placeholder="Time" class="form-control input-md" required=""> -->
+																		{{ Session::get('pick_time') }}
 													<div class="time-radio">
 														<div class="ui form">
 															<div class="grouped fields">
@@ -615,7 +615,7 @@
 																	<label class="control-label">名前*</label>
 																	<div class="ui search focus">
 																		<div class="ui left icon input swdh11 swdh19">
-																			<input class="prompt srch_explore" type="text" name="credit_name" value="" id="holder[name]" required="" maxlength="64" placeholder="Holder Name">															
+																			<input class="prompt srch_explore" type="text" name="credit_name" value="" id="holder[name]" maxlength="64" placeholder="Holder Name">															
 																		</div>
 																	</div>
 																</div>
@@ -625,7 +625,7 @@
 																	<label class="control-label">カード番号*</label>
 																	<div class="ui search focus">
 																		<div class="ui left icon input swdh11 swdh19">
-																			<input class="prompt srch_explore" type="text" name="credit_number" value="" id="card[number]" required="" maxlength="64" placeholder="Card Number">															
+																			<input class="prompt srch_explore" type="text" name="credit_number" value="" id="card[number]"  maxlength="64" placeholder="Card Number">															
 																		</div>
 																	</div>
 																</div>
@@ -633,7 +633,12 @@
 															<div class="col-lg-4">
 																<div class="form-group mt-1">																	
 																	<label class="control-label">有効期限月*</label>
-																	<select class="ui fluid search dropdown form-dropdown" name="credit_exmonth">
+																	<div class="ui search focus">
+																		<div class="ui left icon input swdh11 swdh19">
+																			<input class="prompt srch_explore" type="text" name="credit_exmonth" maxlength="2" placeholder="Year" value="">															
+																		</div>
+																	</div>
+																	<!-- <select class="ui fluid search dropdown form-dropdown" name="credit_exmonth">
 																		<option value="">Month</option>
 																		<option value="1">January</option>
 																		<option value="2">February</option>
@@ -647,7 +652,7 @@
 																		<option value="10">October</option>
 																		<option value="11">November</option>
 																		<option value="12">December</option>
-																	  </select>	
+																	  </select>	 -->
 																</div>
 															</div>
 															<div class="col-lg-4">
@@ -655,7 +660,7 @@
 																	<label class="control-label">有効期限年*</label>
 																	<div class="ui search focus">
 																		<div class="ui left icon input swdh11 swdh19">
-																			<input class="prompt srch_explore" type="text" name="credit_exyear" maxlength="4" placeholder="Year">															
+																			<input class="prompt srch_explore" type="text" name="credit_exyear" maxlength="4" placeholder="Year" value="">															
 																		</div>
 																	</div>
 																</div>
@@ -665,7 +670,7 @@
 																	<label class="control-label">CVV*</label>
 																	<div class="ui search focus">
 																		<div class="ui left icon input swdh11 swdh19">
-																			<input class="prompt srch_explore" name="credit_cvv" maxlength="3" placeholder="CVV">															
+																			<input class="prompt srch_explore" name="credit_cvv" maxlength="3" placeholder="CVV" value="">															
 																		</div>
 																	</div>
 																</div>
@@ -688,7 +693,7 @@
 							
 							<div class="main-total-cart">
 								<h2>合計金額</h2>
-								<span>1000円</span>
+								<span>{{ Session::get('total') }}</span>
 							</div>
                         </div>	
 					</div>
