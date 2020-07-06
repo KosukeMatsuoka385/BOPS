@@ -18,13 +18,35 @@
 						$start_time = "";
 
 						// サービスが30分先の時間を確保しないといけないので30足して60の余り
-						// $now_minute = (Date('i')+30) % 60;
+                        // $now_minute = (Date('i')+30) % 60;
+
+                        // 現在の分
+                        $now_minute0 = Date('i');
+
+                        // 30分後の分
 						$now_minute = (Date('i')+30) % 60;
+						// $now_minute = (Date('i')+20) % 60;
 
 						// 数値が60以上になっている時は場合分け
 						if ($now_minute > Date('I')) {
-							$now_hour = Date('H')+9;
-							$now_time = $now_hour.":".$now_minute;
+
+                            // 分が１桁の場合
+                            if ($now_minute < 10 ) {
+                                    $now_minute =sprintf('%02d', $now_minute);
+                                    $now_hour = Date('H')+9;
+                                }else{
+                                    $now_hour = Date('H')+10;
+                                }
+
+
+
+                            if ($now_hour >= 24  ) {
+                                $now_hour = $now_hour -24;
+                                $now_hour =sprintf('%02d', $now_hour);
+                            }
+
+                            $now_time = $now_hour.":".$now_minute;
+
 						}else{
 							$now_hour = Date('H')+10;
 							if ($now_minute >= 30) {
