@@ -34,3 +34,9 @@ $('#cart_btn').on('click', function () {
     //submit()でフォームの内容を送信
     document.myform.submit();
 })
+
+
+
+$('.dish').on('checked', function () {
+    $('.ingredient').prop('checked', true);
+})

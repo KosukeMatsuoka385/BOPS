@@ -1774,7 +1774,8 @@ i.icon1 {
 /* --- Index Page --- */
 
 .wrapper {
-    padding-top: 128px;
+    /* padding-top: 128px; */
+    padding-top: 30px;
 	padding-bottom: 50px;
 }
 

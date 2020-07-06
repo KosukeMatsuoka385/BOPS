@@ -20,8 +20,15 @@ class CartSessionController extends Controller
 
 
         //カートの中身
+        //カートの中身が0の場合
         $items = $request->items;
         // dd($items);
+
+        if (!$items) {
+            return view('/cart', ['count' => 0, 'subtotal' => 0, 'tax' => 0, 'total' => 0]);
+        } else {
+            $count = count($items);//配列の数
+        }
 
 
         for ($i = 0; $i < count($items); $i++) {
@@ -41,7 +48,6 @@ class CartSessionController extends Controller
             $total = $subtotal + $tax;
         }
 
-        $count = count($items);//配列の数
         $request->session()->put('count', $count);//品数
         $request->session()->put('subtotal', $subtotal);//小計
         $request->session()->put('tax', $tax);//消費税
@@ -49,10 +55,10 @@ class CartSessionController extends Controller
         return view('/cart', ['count' => $count, 'subtotal' => $subtotal, 'tax' => $tax, 'total' => $total]);
     }
 
-    
+
 
     public function update(Request $request)
-    {        
+    {
         // $items = $request->items;
         // $data = $request->session()->all()->get();
         // return var_dump($data);
@@ -77,7 +83,7 @@ class CartSessionController extends Controller
         // $id = $arr['item_price'].$i;
         // dd($id);
         return view('/cart', ['count' => $count]);
-        
+
     }
 
 
@@ -86,7 +92,7 @@ class CartSessionController extends Controller
     //削除機能は一旦保留
     public function destroy(Request $request)
     {
-        
+
         // $items = $request->items;
         $items = session()->all();
         dd($items);
@@ -107,7 +113,7 @@ class CartSessionController extends Controller
         dd($items);
         // return session()->all();
         return session()->all();
-        
+
         dd($items);
         // $items = $request->items;
 

@@ -9,13 +9,21 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
+						<div class="main-title-tt">
+							<div class="main-title-left">
+								<span>Recommend</span>
+								<h2>本日のおすすめ</h2>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12">
 						<div class="owl-carousel offers-banner owl-theme">
 							@foreach ($recommend_items as $recommend_item)
 							<div class="item">
 								<div class="offer-item">
 									<div class="offer-item-img">
 										<div class="gambo-overlay"></div>
-										<img src="{{ $recommend_item->pop_img }}" alt="">
+										<img style="width:340px; height:480px; object-fit:cover" src="{{ $recommend_item->pop_img }}" alt="">
 									</div>
 									<div class="offer-text-dt">
 										{{-- <div class="offer-top-text-banner">
@@ -41,7 +49,7 @@
 					<div class="col-md-12">
 						<div class="main-title-tt">
 							<div class="main-title-left">
-								<span>Shop By</span>
+								<span>Plus One</span>
 								<h2>プラスワン</h2>
 							</div>
 						</div>
@@ -96,7 +104,7 @@
 					<div class="col-md-12">
 						<div class="main-title-tt">
 							<div class="main-title-left">
-								<span>For You</span>
+								<span>Usual Menu</span>
 								<h2>いつものメニュー</h2>
 							</div>
 							<a href="#" class="see-more-btn">See All</a>
@@ -139,7 +147,7 @@
 									<li>
 										<div class="link">
 											{{-- <i class="fa fa-paint-brush"></i> --}}
-											<input type="checkbox">
+											<input class="dish" type="checkbox">
 											{{ $usual_menu->name }}
 											<i class="fa fa-chevron-down"></i>
 										</div>
@@ -148,7 +156,7 @@
 											@if ($umenu_item->umenu_id == $usual_menu->id)
 											<li>
 												{{-- TODO: メニューチェック時にすべてにチェック --}}
-												<input type="checkbox" name="items[]" value='{{ json_encode($umenu_item,JSON_UNESCAPED_UNICODE) }}'>
+												<input class="ingredient" type="checkbox" name="items[]" value='{{ json_encode($umenu_item,JSON_UNESCAPED_UNICODE) }}'>
 												{{-- <input type="checkbox" name="items[]" value='{{ $umenu_item }}'> --}}
 												<a href="#">{{ $umenu_item->item_name }}</a>
 												<a href="#">{{ $umenu_item->item_price }}円</a>
