@@ -9,10 +9,6 @@ Route::get("/", function () {
     return view("gambo");
 });
 
-Route::get("/laradb", function () {
-    return view("welcome");
-});
-
 Route::get("/menus", "MenusController@show");
 
 //Demo (Delete after site publish.)

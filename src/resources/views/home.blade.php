@@ -15,9 +15,9 @@
                     @endif
 
                     ログインに成功しました！
-                    
+
                     <br><br>
-                    <div><a href="{{ url('/') }}">メインページに戻る</a></div>
+                    <div><a href="{{ url('/select_store') }}">店舗選択する</a></div>
                 </div>
             </div>
         </div>

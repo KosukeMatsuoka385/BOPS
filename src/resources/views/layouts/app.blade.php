@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Example</title>
+    <title>BOPS</title>
 
     <!-- Custome Stylesheets -->
     <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
@@ -340,104 +340,7 @@
                 <!-- Cart Sidebar Offsetl End-->
                 <!-- Header Start -->
                 <header class="header clearfix">
-                    <div class="top-header-group">
-                        <div class="top-header">
-                            <div class="res_main_logo">
-                                <a href="{{ url('/') }}"><img src="{{ asset('/Frontend/images/dark-logo-1.svg') }}" alt=""></a>
-                            </div>
-                            <div class="main_logo" id="logo">
-                                <a href="{{ url('/') }}"><img src="{{ asset('/Frontend/images/logo.svg') }}" alt=""></a>
-                                <a href="{{ url('/') }}"><img class="logo-inverse" src="{{ asset('/Frontend/images/dark-logo.svg') }}" alt=""></a>
-                            </div>
-                            <div class="search120">
-                                <div class="ui search">
-                                <div class="ui left icon input swdh10">
-                                    <input class="prompt srch10" type="text" placeholder="Search for products..">
-                                    <i class='uil uil-search-alt icon icon1'></i>
-                                </div>
-                                </div>
-                            </div>
-                            <div class="header_right">
-                                <ul>
-                                    <li>
-                                        <a href="#" class="offer-link"><i class="uil uil-phone-alt"></i>1234-567-890</a>
-                                    </li>
-                                    <li>
-                                        <a href="offers.html" class="offer-link"><i class="uil uil-gift"></i>Offers</a>
-                                    </li>
-                                    <li>
-                                        <a href="faq.html" class="offer-link"><i class="uil uil-question-circle"></i>Help</a>
-                                    </li>
-                                    <li>
-                                        <a href="dashboard_my_wishlist.html" class="option_links" title="Wishlist"><i class='uil uil-heart icon_wishlist'></i><span class="noti_count1"></span></a> {{--span tagにattentionの数値が入る--}}
-                                    </li>
-                                    
-                                    <li class="ui dropdown">
-                                        <a href="#" class="opts_account">
-                                            <img src="{{ asset('/Frontend/images/avatar/img-5.jpg') }}" alt="">
-                                            <span class="user__name"></span>
-                                            <i class="uil uil-angle-down"></i>
-                                        </a>
-                                        <div class="menu dropdown_account">
-                                            <div class="night_mode_switch__btn">
-                                                <a href="#" id="night-mode" class="btn-night-mode">
-                                                    <i class="uil uil-moon"></i> ダークモード
-                                                    <span class="btn-night-mode-switch">
-                                                        <span class="uk-switch-button"></span>
-                                                    </span>
-                                                </a>
-                                            </div>
 
-
-                                            
-                                            @guest
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a>
-                                                </li>
-                                                @if (Route::has('register'))
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" href="{{ route('register') }}">{{ __('新規登録') }}</a>
-                                                    </li>
-                                                @endif
-                                            {{-- ログインしている場合 --}}
-                                            @else
-                                                
-                                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                                        {{ Auth::user()->name }} さん
-                                                    </a>
-
-                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                                        <a class="dropdown-item" href="{{ route('logout') }}"
-                                                        onclick="event.preventDefault();
-                                                                        document.getElementById('logout-form').submit();">
-                                                            {{ __('Logout') }}
-                                                        </a>
-                                                    </div>
-                                            @endguest
-
-                                            <a href="dashboard_overview.html" class="item channel_item"><i class="uil uil-apps icon__1"></i>ダッシュボード</a>
-                                            <a href="dashboard_my_orders.html" class="item channel_item"><i class="uil uil-box icon__1"></i>注文内容</a>
-                                            <a href="dashboard_my_wishlist.html" class="item channel_item"><i class="uil uil-heart icon__1"></i>欲しいものリスト</a>
-                                            <a href="dashboard_my_wallet.html" class="item channel_item"><i class="uil uil-usd-circle icon__1"></i>ウォレット</a>
-                                            <a href="dashboard_my_addresses.html" class="item channel_item"><i class="uil uil-location-point icon__1"></i>登録住所</a>
-                                            <a href="offers.html" class="item channel_item"><i class="uil uil-gift icon__1"></i>注文内容</a>
-                                            <a href="faq.html" class="item channel_item"><i class="uil uil-info-circle icon__1"></i>よくある質問</a>
-                                            {{-- <a href="sign_in.html" class="item channel_item"><i class="uil uil-lock-alt icon__1"></i>ログアウト</a> --}}
-                                            {{-- @guest
-                                            @else
-                                            <a href="{{ route('logout') }}" class="item channel_item" onclick="event.preventDefault();
-                                                                                            document.getElementById('logout-form').submit();">
-                                                                                            <i class="uil uil-lock-alt icon__1"></i>{{ __('ログアウト') }}</a>
-                                            @endguest --}}
-                                            
-
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
                     <div class="sub-header-group">
                         <div class="sub-header">
                             <div class="ui dropdown">
@@ -448,6 +351,33 @@
                                     <button class="navbar-toggler menu_toggle_btn" type="button" data-target="#navbarSupportedContent"><i class="uil uil-bars"></i></button>
                                     <div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
                                         <ul class="navbar-nav main_nav align-self-stretch">
+
+                                            <li class="nav-item">
+                                                <div class="ui icon top left dropdown nav__menu">
+
+                                                    <a class="nav-link" title="Pages">ページ<i class="uil uil-angle-down"></i></a>
+
+
+
+
+                                                    <div class="menu dropdown_page">
+                                                        <a href="dashboard_overview.html" class="item channel_item page__links">アカウント</a>
+                                                        <a href="about_us.html" class="item channel_item page__links">BOPSについて</a>
+                                                        <a href="shop_grid.html" class="item channel_item page__links">Shop Grid</a>
+                                                        <a href="single_product_view.html" class="item channel_item page__links">Single Product View</a>
+                                                        <a href="checkout.html" class="item channel_item page__links">Checkout</a>
+                                                        <a href="request_product.html" class="item channel_item page__links">Product Request</a>
+                                                        <a href="order_placed.html" class="item channel_item page__links">Order Placed</a>
+                                                        <a href="bill.html" class="item channel_item page__links">Bill Slip</a>
+                                                        <a href="sign_in.html" class="item channel_item page__links">Sign In</a>
+                                                        <a href="sign_up.html" class="item channel_item page__links">Sign Up</a>
+                                                        <a href="forgot_password.html" class="item channel_item page__links">Forgot Password</a>
+                                                        <a href="contact_us.html" class="item channel_item page__links">問い合わせる</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+
 
                                             <li>
                                                 <!-- Authentication Links -->
@@ -461,8 +391,64 @@
                                                             <a class="nav-link" href="{{ route('register') }}">{{ __('新規登録') }}</a>
                                                         </li>
                                                     @endif
+
                                                 {{-- ログインしている場合 --}}
                                                 @else
+
+                                                    <div class="ui icon top left dropdown nav__menu">
+
+                                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                            {{ Auth::user()->name }} さん
+                                                        </a>
+                                                        <div class="menu dropdown_page" aria-labelledby="navbarDropdown">
+                                                            <a class="dropdown-item item channel_item page__links" href="{{ route('logout') }}"
+                                                            onclick="event.preventDefault();
+                                                                            document.getElementById('logout-form').submit();">
+                                                                {{ __('Logout') }}
+                                                            </a>
+                                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                                {{ csrf_field() }}
+                                                            </form>
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                    {{-- <li class="nav-item dropdown">
+                                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                            {{ Auth::user()->name }} さん
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                                            onclick="event.preventDefault();
+                                                                            document.getElementById('logout-form').submit();">
+                                                                {{ __('Logout') }}
+                                                            </a>
+
+                                                        </div>
+                                                    </li> --}}
+                                                @endguest
+                                            </li>
+                                            {{-- <li>
+                                                <!-- Authentication Links -->
+                                                <!--ログインしていない場合 -->
+                                                @guest
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a>
+                                                    </li>
+                                                    @if (Route::has('register'))
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="{{ route('register') }}">{{ __('新規登録') }}</a>
+                                                        </li>
+                                                    @endif
+                                                <!-- ログインしている場合 -->
+                                                @else
+                                                <div class="menu dropdown_page">
+                                                <a href="{{ url('logout')}}" class="item channel_item page__links">アカウント</a>
+                                                </div>
+
                                                     <li class="nav-item dropdown">
                                                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                                             {{ Auth::user()->name }} さん
@@ -478,7 +464,16 @@
                                                         </div>
                                                     </li>
                                                 @endguest
-                                            </li>
+                                            </li> --}}
+                                            <li>
+                                                <div class="night_mode_switch__btn night_mode_li">
+                                                <a href="#" id="night-mode" class="btn-night-mode">
+                                                    <div>ダークモード</div>
+                                                    <span class="btn-night-mode-switch">
+                                                        <span class="uk-switch-button"></span>
+                                                    </span>
+                                                </a>
+                                            </div></li>
                                             <li class="nav-item"><a href="{{url('/')}}" class="nav-link active" title="Home">Home</a></li>
                                             <li class="nav-item"><a href="{{url('select_store') }}" class="nav-link new_item" title="select Store">店舗を選ぶ</a></li>
                                             <li class="nav-item"><a href="shop_grid.html" class="nav-link new_item" title="New Products">新商品</a></li>
@@ -498,7 +493,7 @@
                                                         <a href="sign_in.html" class="item channel_item page__links">Sign In</a>
                                                         <a href="sign_up.html" class="item channel_item page__links">Sign Up</a>
                                                         <a href="forgot_password.html" class="item channel_item page__links">Forgot Password</a>
-                                                        <a href="contact_us.html" class="item channel_item page__links">Contact Us</a>
+                                                        <a href="contact_us.html" class="item channel_item page__links">問い合わせる</a>
                                                     </div>
                                                 </div>
                                             </li>
@@ -521,7 +516,7 @@
                                 </div>
                             </nav>
                             <div class="header_cart order-1">
-                                <a href="#" class="cart__btn hover-btn pull-bs-canvas-left" title="Cart"><i class="uil uil-shopping-cart-alt"></i><span>Cart</span><i class="uil uil-angle-down"></i></a>
+                                <a href="#" id="cart_btn" class="cart__btn hover-btn pull-bs-canvas-left" title="Cart"><i class="uil uil-shopping-cart-alt"></i><span>Cart</span><i class="uil uil-angle-down"></i></a>
                             </div>
                             <div class="search__icon order-1">
                                 <a href="#" class="search__btn hover-btn" data-toggle="modal" data-target="#search_model" title="Search"><i class="uil uil-search"></i></a>
@@ -572,21 +567,21 @@
                             <div class="row">
                                 <div class="col-lg-3 col-md-6 col-sm-6">
                                     <div class="second-row-item">
-                                        <li class="nav-item text-center footer-li">
+                                        <li class="nav-item text-left footer-li">
                                             <div class="ui icon top left dropdown nav__menu">
-                                                <a class="nav-link" title="Blog">Categories<i class="uil uil-angle-down"></i></a>
-                                                <div class="menu dropdown_page">
-                                                    <a href="our_blog.html" class="item channel_item page__links">Fruits and Vegetables</a>
-                                                    <a href="blog_no_sidebar.html" class="item channel_item page__links">Grocery & Staples</a>
-                                                    <a href="blog_left_sidebar.html" class="item channel_item page__links">Dairy & Eggs</a>
-                                                    <a href="blog_right_sidebar.html" class="item channel_item page__links">Beverages</a>
-                                                    <a href="blog_detail_view.html" class="item channel_item page__links">Snacks</a>
-                                                    <a href="#" class="item channel_item page__links">Home Care</a>
-                                                    <a href="#" class="item channel_item page__links">Noodles & Sauces</a>
-                                                    <a href="#" class="item channel_item page__links">Personal Care</a>
-                                                    <a href="#" class="item channel_item page__links">Pet Care</a>
-                                                    <a href="#" class="item channel_item page__links">Meat & Seafood</a>
-                                                    <a href="#" class="item channel_item page__links">Electronics</a>
+                                                <a class="nav-link text-left " title="Blog" style="padding-bottom: 15px"><strong>Categories</strong><i class="uil uil-angle-down"></i></a>
+                                                <div class="menu dropdown_page  text-left ">
+                                                    <a href="our_blog.html" class="item channel_item page__links text-left ">Fruits and Vegetables</a>
+                                                    <a href="blog_no_sidebar.html" class="item channel_item page__links text-left ">Grocery & Staples</a>
+                                                    <a href="blog_left_sidebar.html" class="item channel_item page__links text-left ">Dairy & Eggs</a>
+                                                    <a href="blog_right_sidebar.html" class="item channel_item page__links text-left ">Beverages</a>
+                                                    <a href="blog_detail_view.html" class="item channel_item page__links text-left ">Snacks</a>
+                                                    <a href="#" class="item channel_item page__links text-left ">Home Care</a>
+                                                    <a href="#" class="item channel_item page__links text-left ">Noodles & Sauces</a>
+                                                    <a href="#" class="item channel_item page__links text-left ">Personal Care</a>
+                                                    <a href="#" class="item channel_item page__links text-left ">Pet Care</a>
+                                                    <a href="#" class="item channel_item page__links text-left ">Meat & Seafood</a>
+                                                    <a href="#" class="item channel_item page__links text-left ">Electronics</a>
                                                 </div>
                                             </div>
                                         </li>
@@ -596,17 +591,17 @@
 
                                 <div class="col-lg-3 col-md-6 col-sm-6">
                                     <div class="second-row-item">
-                                        <li class="nav-item text-center footer-li">
+                                        <li class="nav-item text-left footer-li">
                                             <div class="ui icon top left dropdown nav__menu">
-                                                <a class="nav-link" title="Blog">Useful Links<i class="uil uil-angle-down"></i></a>
+                                                <a class="nav-link text-left " title="Blog" style="padding-bottom: 15px"><strong>Useful Links</strong><i class="uil uil-angle-down"></i></a>
                                                 <div class="menu dropdown_page">
-                                                    <a href="about_us.html" class="item channel_item page__links">About US</a>
-                                                    <a href="shop_grid.html" class="item channel_item page__links">Featured Products</a>
-                                                    <a href="offers.html" class="item channel_item page__links">Offers</a>
-                                                    <a href="our_blog.html" class="item channel_item page__links">Blog</a>
-                                                    <a href="blog_detail_view.html" class="item channel_item page__links">Faq</a>
-                                                    <a href="career.html" class="item channel_item page__links">Careers</a>
-                                                    <a href="contact_us.html" class="item channel_item page__links">Contact Us</a>
+                                                    <a href="about_us.html" class="item channel_item page__links text-left ">About US</a>
+                                                    <a href="shop_grid.html" class="item channel_item page__links text-left ">Featured Products</a>
+                                                    <a href="offers.html" class="item channel_item page__links text-left ">Offers</a>
+                                                    <a href="our_blog.html" class="item channel_item page__links text-left ">Blog</a>
+                                                    <a href="blog_detail_view.html" class="item channel_item page__links text-left ">Faq</a>
+                                                    <a href="career.html" class="item channel_item page__links text-left ">Careers</a>
+                                                    <a href="contact_us.html" class="item channel_item page__links text-left ">Contact Us</a>
                                                 </div>
                                             </div>
                                         </li>
