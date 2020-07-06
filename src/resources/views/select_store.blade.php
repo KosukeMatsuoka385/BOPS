@@ -1,13 +1,13 @@
 ﻿@extends("layouts.app")
 @section("content")
-<br><br><br><br><br><br><br><br>
+<br><br>
 
 	<div class="main-title-tt">
 		<div class="main-title-left">
 			<span>店舗を選んでください</span>
 		</div>
 	</div>
-	
+
 	<p>< 選択店舗一覧 ></p>
 	<div class="accordion" id="accordionExample">
 		<div class="card">
