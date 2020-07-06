@@ -19,17 +19,12 @@ Route::get("/tables_check_view_html",function(){
 //checkout
 Route::post("/checkout", "CheckoutController@index");
 Route::post("/orderplaced", "CheckoutController@store");
-
+// Route::post("/orderplaced", "CheckoutController@insert");
 
 //orderplaced
-Route::get("/orderplaced",function(){
-    return view("orderplaced");
-});
-
+Route::get("/orderplaced", "CheckoutController@index");
 //myorder
-Route::get("/myorder",function(){
-    return view("myorder");
-});
+Route::get("/myorder", "MyOrderController@index");
 
 
 Route::get("/pick_time_table", function () {

@@ -21,10 +21,10 @@ class CheckoutController extends Controller
         //リピーターはusersテーブルから電話番号、クレカ情報を表示
         $user = DB::table('users')
         ->select('phone','credit_name','credit_number','credit_exmonth','credit_exyear','credit_cvv')
-        ->where('user_id', '=', $user_id)
+        ->where('id', '=', $user_id)
         ->get();
 
-        return view('orderplaced');
+        return view('checkout',['user' => $user]);
     }
 
     public function insert(Request $request)
@@ -32,7 +32,7 @@ class CheckoutController extends Controller
         $user_id = Auth::user()->id;
         //新規はusersテーブルから電話番号、クレカ情報を追記
         $user = DB::table('users')
-        ->where('user_id', '=', $user_id)
+        ->where('id', '=', $user_id)
         ->insert([
             'phone' => $request->phone,
             'credit_name' => $request->credit_name,
@@ -42,26 +42,27 @@ class CheckoutController extends Controller
             'credit_cvv' => $request->credit_cvv
         ]);
 
-        return view('orderplaced');
+        return view('orderplaced',['user' => $user]);
     }
 
     public function store(Request $request)
     {
-        //usersテーブルに電話番号、クレカ情報を登録（クレカは余裕があればstripe連携）
-        // $user = new User; //user特定必要
+        // usersテーブルに電話番号、クレカ情報を登録（クレカは余裕があればstripe連携）
+        $user = User::find(Auth::user()->id); //user特定必要
+        // $user->user_id =
         // $user->user_id = Auth::user()->id;
         // $user->name = 'test';
         // $user->email = 'test@test.com';
         // $user->password = 1234;
 
-        // $user->phone = $request->phone;
-        // $user->credit_name = $request->credit_name;
-        // $user->credit_number = $request->credit_number;
-        // $user->credit_exmonth = $request->credit_exmonth;
-        // $user->credit_exyear = $request->credit_exyear;
-        // $user->credit_cvv = $request->credit_cvv;
-        // $user->save();
-        
+        $user->phone = $request->phone;
+        $user->credit_name = $request->credit_name;
+        $user->credit_number = $request->credit_number;
+        $user->credit_exmonth = $request->credit_exmonth;
+        $user->credit_exyear = $request->credit_exyear;
+        $user->credit_cvv = $request->credit_cvv;
+        $user->save();
+
         //ordersテーブルに以下情報を登録
         $order = new Order;
         // $date = new Carbon(Carbon::now());//エラー
@@ -97,9 +98,8 @@ class CheckoutController extends Controller
         $order_detail->save();
 
         //次の画面であるorderplacedに遷移
-        return view('orderplaced');
+        return view('orderplaced',['user' => $user]);
 
     }
-    
-}
 
+}
