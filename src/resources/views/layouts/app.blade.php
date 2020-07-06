@@ -572,21 +572,21 @@
                             <div class="row">
                                 <div class="col-lg-3 col-md-6 col-sm-6">
                                     <div class="second-row-item">
-                                        <li class="nav-item text-center footer-li">
+                                        <li class="nav-item text-left footer-li">
                                             <div class="ui icon top left dropdown nav__menu">
-                                                <a class="nav-link" title="Blog">Categories<i class="uil uil-angle-down"></i></a>
-                                                <div class="menu dropdown_page">
-                                                    <a href="our_blog.html" class="item channel_item page__links">Fruits and Vegetables</a>
-                                                    <a href="blog_no_sidebar.html" class="item channel_item page__links">Grocery & Staples</a>
-                                                    <a href="blog_left_sidebar.html" class="item channel_item page__links">Dairy & Eggs</a>
-                                                    <a href="blog_right_sidebar.html" class="item channel_item page__links">Beverages</a>
-                                                    <a href="blog_detail_view.html" class="item channel_item page__links">Snacks</a>
-                                                    <a href="#" class="item channel_item page__links">Home Care</a>
-                                                    <a href="#" class="item channel_item page__links">Noodles & Sauces</a>
-                                                    <a href="#" class="item channel_item page__links">Personal Care</a>
-                                                    <a href="#" class="item channel_item page__links">Pet Care</a>
-                                                    <a href="#" class="item channel_item page__links">Meat & Seafood</a>
-                                                    <a href="#" class="item channel_item page__links">Electronics</a>
+                                                <a class="nav-link text-left " title="Blog" style="padding-bottom: 15px"><strong>Categories</strong><i class="uil uil-angle-down"></i></a>
+                                                <div class="menu dropdown_page  text-left ">
+                                                    <a href="our_blog.html" class="item channel_item page__links text-left ">Fruits and Vegetables</a>
+                                                    <a href="blog_no_sidebar.html" class="item channel_item page__links text-left ">Grocery & Staples</a>
+                                                    <a href="blog_left_sidebar.html" class="item channel_item page__links text-left ">Dairy & Eggs</a>
+                                                    <a href="blog_right_sidebar.html" class="item channel_item page__links text-left ">Beverages</a>
+                                                    <a href="blog_detail_view.html" class="item channel_item page__links text-left ">Snacks</a>
+                                                    <a href="#" class="item channel_item page__links text-left ">Home Care</a>
+                                                    <a href="#" class="item channel_item page__links text-left ">Noodles & Sauces</a>
+                                                    <a href="#" class="item channel_item page__links text-left ">Personal Care</a>
+                                                    <a href="#" class="item channel_item page__links text-left ">Pet Care</a>
+                                                    <a href="#" class="item channel_item page__links text-left ">Meat & Seafood</a>
+                                                    <a href="#" class="item channel_item page__links text-left ">Electronics</a>
                                                 </div>
                                             </div>
                                         </li>
@@ -596,17 +596,17 @@
 
                                 <div class="col-lg-3 col-md-6 col-sm-6">
                                     <div class="second-row-item">
-                                        <li class="nav-item text-center footer-li">
+                                        <li class="nav-item text-left footer-li">
                                             <div class="ui icon top left dropdown nav__menu">
-                                                <a class="nav-link" title="Blog">Useful Links<i class="uil uil-angle-down"></i></a>
+                                                <a class="nav-link text-left " title="Blog" style="padding-bottom: 15px"><strong>Useful Links</strong><i class="uil uil-angle-down"></i></a>
                                                 <div class="menu dropdown_page">
-                                                    <a href="about_us.html" class="item channel_item page__links">About US</a>
-                                                    <a href="shop_grid.html" class="item channel_item page__links">Featured Products</a>
-                                                    <a href="offers.html" class="item channel_item page__links">Offers</a>
-                                                    <a href="our_blog.html" class="item channel_item page__links">Blog</a>
-                                                    <a href="blog_detail_view.html" class="item channel_item page__links">Faq</a>
-                                                    <a href="career.html" class="item channel_item page__links">Careers</a>
-                                                    <a href="contact_us.html" class="item channel_item page__links">Contact Us</a>
+                                                    <a href="about_us.html" class="item channel_item page__links text-left ">About US</a>
+                                                    <a href="shop_grid.html" class="item channel_item page__links text-left ">Featured Products</a>
+                                                    <a href="offers.html" class="item channel_item page__links text-left ">Offers</a>
+                                                    <a href="our_blog.html" class="item channel_item page__links text-left ">Blog</a>
+                                                    <a href="blog_detail_view.html" class="item channel_item page__links text-left ">Faq</a>
+                                                    <a href="career.html" class="item channel_item page__links text-left ">Careers</a>
+                                                    <a href="contact_us.html" class="item channel_item page__links text-left ">Contact Us</a>
                                                 </div>
                                             </div>
                                         </li>
