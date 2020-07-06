@@ -52,7 +52,7 @@
 								if ($now_hour < $hour) {
 										// return " disable='true' ";
 										// return " disable='false' ";
-										echo '<td class="col-xs-3" style="padding:15px 2px 0 2px;"><div><label for="'.$hour.':'.$min.'" class="btn btn-default btn-outline-success" >';
+										echo '<td class="col-xs-3" style="padding:15px 1px 0 1px;"><div class="btn btn-default btn-outline-success" ><label for="'.$hour.':'.$min.'" >';
 										echo '<input type="radio" name="pick_time" value="'.$hour.':'.$min.'" id="'.$hour.':'.$min.'"';
 										echo ">";
 										echo $hour.':'.$min."~";
