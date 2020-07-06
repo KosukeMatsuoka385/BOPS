@@ -54,28 +54,29 @@
 			<div class="side-cart-items">
 				<!-- foreachで表示 -->
 				@for ($i = 0; $i < $count; $i++) <div class="cart-item">
-					<div class="cart-text">
+					<!-- <div class="cart-text"> -->
 						<h4>{{ Session::get("name$i") }}</h4>
 						<div class="qty-group">
+						<form action="{{url('/cart')}}">
 							<div class="quantity buttons_added">
-								<input type="button" value="-" class="minus minus-btn">
+							<!-- ボタン -->
+								<!-- <input type="button" value="-" class="minus minus-btn">
 								<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
-								<input type="button" value="+" class="plus plus-btn">
+								<input type="button" value="+" class="plus plus-btn"> -->
+							<!-- ボタン -->
+								<!-- <button type="submit" class="cart-checkout-btn hover-btn">更新</button> -->
 							</div>
-							<div name="quantity" class="cart-item-price">{{ Session::get("price$i") }}円</div>
-							<!-- <div class="cart-item-price">{{ Session::get("qty$i") }}つ</div> -->
-						</div>
+						</form>
+						<!-- <div class="cart-item-price">{{ Session::get("qty$i") }}つ</div> -->
+					</div>
+					<div name="quantity" class="cart-item-price">{{ Session::get("price$i") }}円</div>
 						<!-- 削除ボタン -->
-						<!-- <form action="/cart/delete/{{$i}}" method="POST">
-						<input type="hidden" value="kame">
+						<!-- <form action="/cart/delete/{index}" method="POST">
 							{{(csrf_field())}}
 							{{method_field('DELETE')}}
-							<button type="submit" class="cart-close-btn">
-							{{ Session::get("price$i") }}
-								<i class="uil uil-multiply"></i>
-							</button>
+							<button type="submit" class="cart-close-btn"><i class="uil uil-multiply"></i></button>
 						</form> -->
-					</div>
+					<!-- </div> -->
 			</div>
 			@endfor
 		</div>
@@ -89,14 +90,19 @@
 		{{csrf_field()}}
 		<div class="bs-canvas-footer">
 			<div class="main-total-cart">
+				<h2>小計</h2>
+				<input type="hidden" name="subtotal" value='{"subtotal": {{ Session::get("subtotal") }}'>
+				<span>{{$subtotal}}円</span>
+			</div>
+			<div class="main-total-cart">
 				<h2>消費税(8%)</h2>
 				<input type="hidden" name="tax" value='{"tax": {{ Session::get("tax") }}'>
-				<span>{{ Session::get("tax") }}円</span>
+				<span>{{$tax}}円</span>
 			</div>
 			<div class="main-total-cart">
 				<h2>合計金額</h2>
 				<input type="hidden" name="total" value='{"total": {{ Session::get("total") }}'>
-				<span>{{ Session::get("total") }}円</span>
+				<span>{{$total}}円</span>
 			</div>
 			<div class="checkout-cart">
 				<!-- 合計金額 -->

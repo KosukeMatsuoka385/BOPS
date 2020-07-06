@@ -42,13 +42,28 @@ Route::get("/pick_time_table", function () {
 
 Route::get("/select_store", function () {
     return view("select_store");
-
 });
+
+//menus_test
+// Route::get("/menus_test",function(){
+//     return view("menus_test");
+// });
+
+//checkout_test
+// Route::post("/checkout_test",function(){
+//     return view("checkout_test");
+// });
+
 
 //session
 Route::get("/cart", "CartSessionController@index");
 Route::post("/cart", "CartSessionController@store");
-Route::delete("/cart", "CartSessionController@destroy");
+// Route::post("/cart_toggle", "CartSessionController@store");
+// Route::post("/cart", "CartSessionController@update");
+// Route::post("/cart/delete/{index}", "CartSessionController@store");
+// Route::delete("/cart/delete/{index}", "CartSessionController@destroy");
+
+// Route::delete('cart/destroy/{id}', 'CartSessionController@destroy');
 
 //=======================================================================
 //index
