@@ -9,7 +9,7 @@
 			</div>
 
 		<div class="container">
-			<form action="#" method="post">
+			<form action="/menus" method="get">
 				<table>
 
 					<?php
@@ -37,10 +37,10 @@
 						// 現在時刻の30分後
 						echo "<div>選択可能受取時間帯は<br><strong>".$now_time."</strong>の時間帯以降のものとなります</div>";
 						echo "<p>(例. 現在時刻 14:17 の場合,30分後の14:47は<br>14:45~の時間を過ぎてしまっている為、<br>15:00 以降の時間帯から選択可能となります)</p>";
-						
-						for ($hour=10; $hour <= 23 ; $hour++) { 
+
+						for ($hour=10; $hour <= 23 ; $hour++) {
 							echo '<tr>';
-							for ($min=0; $min <= 45; $min = $min + 15) { 
+							for ($min=0; $min <= 45; $min = $min + 15) {
 
 								// 0だと１桁になってしまうので2桁のゼロ(string型)に変換
 								if ($min == 0 ) {
@@ -71,11 +71,11 @@
 						}
 
 
-												
-						//////////////////// 時間の分の部分のfor文 --一応原文で保存 //////////////////// 
+
+						//////////////////// 時間の分の部分のfor文 --一応原文で保存 ////////////////////
 
 						// echo '<tr>';
-						// for ($min=0; $min <= 45; $min = $min + 15) { 
+						// for ($min=0; $min <= 45; $min = $min + 15) {
 						// 	if ($min !== 0 ) {
 						// 		echo '<td class="col-xs-3"><div><label for="10:'.$min.'">';
 						// 		// echo $min;
@@ -96,7 +96,7 @@
 						// }
 						// echo '</tr>'. `\n`;
 
-						//////////////////// 時間の分の部分のfor文 --一応原文で保存 //////////////////// 
+						//////////////////// 時間の分の部分のfor文 --一応原文で保存 ////////////////////
 
 						// print ($time_table);
 
@@ -107,9 +107,9 @@
 				<br><br>
 				<div class="card-body text-right">
 				<button type="submit" href="{{ url('menus') }}" class="btn btn-primary" style="padding: 10px 20px;">選択する</button>
-				</div>				  
+				</div>
 			</form>
-		
+
 		</div>
 	</div>
 	@endsection

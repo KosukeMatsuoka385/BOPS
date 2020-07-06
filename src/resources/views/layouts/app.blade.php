@@ -371,7 +371,7 @@
                                     <li>
                                         <a href="dashboard_my_wishlist.html" class="option_links" title="Wishlist"><i class='uil uil-heart icon_wishlist'></i><span class="noti_count1"></span></a> {{--span tagにattentionの数値が入る--}}
                                     </li>
-                                    
+
                                     <li class="ui dropdown">
                                         <a href="#" class="opts_account">
                                             <img src="{{ asset('/Frontend/images/avatar/img-5.jpg') }}" alt="">
@@ -389,19 +389,19 @@
                                             </div>
 
 
-                                            
+
                                             @guest
-                                                    
+
                                                         <a class="nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a>
-                                                    
+
                                                 @if (Route::has('register'))
                                                         <div>
                                                             <a class="nav-link item channel_item" href="{{ route('register') }}"><i class="uil uil-door-open">{{ __('新規登録') }}</i></a>
-                                                        </div>                                               
+                                                        </div>
                                                 @endif
                                             {{-- ログインしている場合 --}}
                                             @else
-                                                
+
                                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                                         {{ Auth::user()->name }} さん
                                                     </a>
@@ -429,7 +429,7 @@
                                                                                             document.getElementById('logout-form').submit();">
                                                                                             <i class="uil uil-lock-alt icon__1"></i>{{ __('ログアウト') }}</a>
                                             @endguest --}}
-                                            
+
 
                                         </div>
                                     </li>
@@ -437,7 +437,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="sub-header-group">
                         <div class="sub-header">
                             <div class="ui dropdown">
@@ -521,7 +521,7 @@
                                 </div>
                             </nav>
                             <div class="header_cart order-1">
-                                <a href="#" class="cart__btn hover-btn pull-bs-canvas-left" title="Cart"><i class="uil uil-shopping-cart-alt"></i><span>Cart</span><i class="uil uil-angle-down"></i></a>
+                                <a href="#" id="cart_btn" class="cart__btn hover-btn pull-bs-canvas-left" title="Cart"><i class="uil uil-shopping-cart-alt"></i><span>Cart</span><i class="uil uil-angle-down"></i></a>
                             </div>
                             <div class="search__icon order-1">
                                 <a href="#" class="search__btn hover-btn" data-toggle="modal" data-target="#search_model" title="Search"><i class="uil uil-search"></i></a>
