@@ -6600,3 +6600,7 @@ textarea {
 .footer-li{
     list-style: none;
 }
+
+.move-store-select{
+padding-top: 30px;
+}

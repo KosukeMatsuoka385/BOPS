@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="container" style="padding: 125px 0 140px;">
+<div class="container" style="padding: 100px 0 140px;">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -17,7 +17,7 @@
                     ログインに成功しました！
 
                     <br><br>
-                    <div><a href="{{ url('/select_store') }}">店舗選択する</a></div>
+                    <div class="move-store-select"><a href="{{ url('/select_store') }}">店舗選択する</a></div>
                 </div>
             </div>
         </div>
