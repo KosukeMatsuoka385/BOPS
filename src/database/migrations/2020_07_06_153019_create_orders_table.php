@@ -14,6 +14,7 @@
                 {
                     Schema::create("orders", function (Blueprint $table) {
 						$table->increments('id')->unsigned();
+						$table->integer('user_id')->unsigned();
 						$table->date('date');
 						$table->integer('subtotal')->nullable();
 						$table->integer('tax');
@@ -23,11 +24,11 @@
 						$table->integer('payment_type');
 						$table->integer('status');
 						$table->string('pick_time');
-						$table->integer('store_id')->nullable()->unsigned();
+						$table->integer('store_id')->unsigned();
 						$table->timestamps();
 						$table->softDeletes();
-						//$table->foreign("id")->references("id")->on("users");
-						//$table->foreign("id")->references("id")->on("m_pick_times");
+						//$table->foreign("user_id")->references("id")->on("users");
+						//$table->foreign("store_id")->references("id")->on("m_stores");
 
 
 
@@ -35,8 +36,8 @@
 						// -- SELECT [orders]--
 						// ----------------------------------------------------
 						// $query = DB::table("orders")
-						// ->leftJoin("users","users.id", "=", "orders.id")
-						// ->leftJoin("m_pick_times","m_pick_times.id", "=", "orders.id")
+						// ->leftJoin("users","users.id", "=", "orders.user_id")
+						// ->leftJoin("m_stores","m_stores.id", "=", "orders.store_id")
 						// ->get();
 						// dd($query); //For checking
 
