@@ -52,8 +52,8 @@
 					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
 	</div>
 	<!-- Body End -->
 
-@endsectionh
+@endsection

@@ -25,7 +25,7 @@
 						<div class="user-dt">
 							<div class="user-img">
 								<img src="{{ asset('/Frontend/images/avatar/img-5.jpg')}}" alt="">
-								<div class="img-add">													
+								<div class="img-add">
 									<input type="file" id="file">
 									<label for="file"><i class="uil uil-camera-plus"></i></label>
 								</div>
@@ -37,11 +37,11 @@
 					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
 		<div class="">
 			<div class="container">
 				<div class="row">
-					
+
 					<div class="col-lg-9 col-md-8">
 						<div class="dashboard-right">
 							<div class="row">
@@ -54,7 +54,7 @@
 									<div class="pdpt-bg">
 										<div class="pdpt-title">
 											<h6>お受け取り予定時間 {{$my_order->order_pick_time}}</h6>
-										</div> 
+										</div>
 										<div class="order-body10">
 											<ul class="order-dtsll">
 												<li>
@@ -64,7 +64,7 @@
 												</li>
 												<li>
 													<div class="order-dt47">
-														<h4>{{$my_order->order_store_name}</h4>
+														<h4>{{$my_order->order_store_name}}</h4>
 														<p>{{$my_order->order_store_tel}}</p>
 														<div class="order-title">購入詳細 <span data-inverted="" data-tooltip="詳細" data-position="top center">?</span></div>
 													</div>
@@ -88,7 +88,7 @@
 											</div>
 											<div class="track-order">
 												<h4>注文状況</h4>
-												<div class="bs-wizard" style="border-bottom:0;">   
+												<div class="bs-wizard" style="border-bottom:0;">
 													<div class="bs-wizard-step active">
 														<div class="text-center bs-wizard-stepnum">注文受付</div>
 														<div class="progress"><div class="progress-bar"></div></div>
@@ -125,8 +125,8 @@
 											</div> -->
 										</div>
 									</div>
-	
-								</div>								
+
+								</div>
 							</div>
 						</div>
 					</div>
@@ -144,9 +144,9 @@
 							</div>
 						</div>
 					</div>
-				</div>	
-			</div>	
-		</div>	
+				</div>
+			</div>
+		</div>
 	</div>
     <!-- Body End -->
 	@endsection

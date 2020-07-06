@@ -9,7 +9,8 @@
 			</div>
 
 		<div class="container">
-			<form action="/menus" method="get">
+			<form action="/put_pick_time" method="post">
+				{{(csrf_field())}}
 				<table>
 
 					<?php

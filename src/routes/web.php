@@ -27,7 +27,18 @@ Route::get("/orderplaced", "CheckoutController@index");
 Route::get("/myorder", "MyOrderController@index");
 
 
-Route::get("/pick_time_table", function () {
+Route::post("/put_pick_time", function (Request $request) {
+    // session()->put('pick_time', $request->pick_time);
+    session()->put('pick_time', '15:45');
+    // return var_dump(session('pick_time'));
+    return redirect('/menus');
+    // return redirect('/menu')->action('MenusController@show');
+});
+
+
+Route::post("/pick_time_table", function (Request $request) {
+    session()->put('store_name', $request->store_name);
+    // return var_dump(session('store_name'));
     return view("pick_time_table");
 });
 

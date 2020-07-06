@@ -9,8 +9,9 @@ use Auth;
 
 class MenusController extends Controller
 {
-    public function show()
+    public function show(Request $request)
     {
+
         $user_id = Auth::user()->id;
         // $user_id = 1;
         $store_id = session('store_id',1);

@@ -76,6 +76,7 @@ class CheckoutController extends Controller
         $pick_time = session('pick_time','00:00');
 
         $order->store_id = $store_id;//テーブルにstore_id追加
+        $order->user_id = Auth::user()->id;
         $order->date = $date;
         $order->subtotal = $subtotal;
         $order->tax = $tax;

@@ -10,12 +10,15 @@
 
 	<p>< 選択店舗一覧 ></p>
 	<div class="accordion" id="accordionExample">
-        <form action="" method="post">
+		<form action="{{url('pick_time_table') }}" method="post">
+			{{(csrf_field())}}
             <div class="card">
                 <div class="card-header" id="headingOne">
                     <h5 class="mb-0">
                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        成城石井 アトレ五反田1店　
+						成城石井 アトレ五反田1店　
+						{{-- どの店舗選んでも成城石井が飛ぶ --}}
+						<input type="hidden" name="store_name" value="成城石井 アトレ五反田1店">
                         <a href="https://goo.gl/maps/KJVQ4nV5Wfhv6zoZ8" class="btn btn-outline-info" target="_blank">MAP</a>
                     </button>
                     </h5>
@@ -32,11 +35,11 @@
                             </div> --}}
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">【住所】 東京都品川区東五反田1丁目26−14</li>
-                                <li class="list-group-item">【営業時間】 7：00～23：00(土日 ~22:00)</li>
+								<li class="list-group-item">【営業時間】 7：00～23：00(土日 ~22:00)</li>
                             </ul>
                             <div class="card-body text-right">
                                 {{-- <a href="#" class="card-link">Card link</a> --}}
-                                <a href="{{url('pick_time_table') }}" type="submit" class="btn btn-primary hover-btn">選択する</a>
+                                <button type="submit" class="btn btn-primary hover-btn">選択する</button>
                             </div>
                         </div>
                     </div>
