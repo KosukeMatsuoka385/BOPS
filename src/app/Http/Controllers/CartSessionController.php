@@ -35,16 +35,23 @@ class CartSessionController extends Controller
             $arr = json_decode($items[$i], true);
             $request->session()->put('name' . $i, $request->input('name', $arr['item_name']));
             $request->session()->put('price' . $i, $request->input('name', $arr['item_price']));
-            // $request->session()->put('qty' . $i, $request->input('name', $arr['qty']));
+            $request->session()->put('qty' . $i, $request->input('name', $arr['qty']));
         }
         $count = count($items);
         $request->session()->put('count', $count);
+
+        $total = 0;
+        for ($i = 0; $i < count($items); $i++) {
+            $price = session('price'.$i);
+            $qty = session('qty'.$i);
+            $total += $price * $qty;
+        }
 
         // return var_dump($arr);
         // return session()->all();
         // return $arr['item_name'];
         // return var_dump($arr['item_name']);
-        return view('/cart', ['count' => $count]);
+        return view('/cart', ['count' => $count, 'total' => $total]);
     }
 
     public function destroy(Request $request)

@@ -93,7 +93,7 @@
 			</div>
 			<div class="main-total-cart">
 				<h2>合計金額</h2>
-				<span>$total</span>
+				<span>{{ $total }}</span>
 			</div>
 			<div class="checkout-cart">
 				<!-- 受取店舗 -->
