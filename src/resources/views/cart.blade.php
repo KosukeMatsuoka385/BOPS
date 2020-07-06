@@ -89,11 +89,11 @@
 		<div class="bs-canvas-footer">
 			<div class="main-total-cart">
 				<h2>消費税</h2>
-				<span>$tax</span>
+				<span>{{ $tax }}</span>
 			</div>
 			<div class="main-total-cart">
 				<h2>合計金額</h2>
-				<span>{{ $total }}</span>
+				<span>{{ $total }}円</span>
 			</div>
 			<div class="checkout-cart">
 				<!-- 受取店舗 -->
