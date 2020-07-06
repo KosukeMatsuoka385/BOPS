@@ -244,33 +244,6 @@
                                     <div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
                                         <ul class="navbar-nav main_nav align-self-stretch">
 
-                                            <li class="nav-item">
-                                                <div class="ui icon top left dropdown nav__menu">
-
-                                                    <a class="nav-link" title="Pages">ページ<i class="uil uil-angle-down"></i></a>
-
-
-
-
-                                                    <div class="menu dropdown_page">
-                                                        <a href="dashboard_overview.html" class="item channel_item page__links">アカウント</a>
-                                                        <a href="about_us.html" class="item channel_item page__links">BOPSについて</a>
-                                                        <a href="shop_grid.html" class="item channel_item page__links">Shop Grid</a>
-                                                        <a href="single_product_view.html" class="item channel_item page__links">Single Product View</a>
-                                                        <a href="checkout.html" class="item channel_item page__links">Checkout</a>
-                                                        <a href="request_product.html" class="item channel_item page__links">Product Request</a>
-                                                        <a href="order_placed.html" class="item channel_item page__links">Order Placed</a>
-                                                        <a href="bill.html" class="item channel_item page__links">Bill Slip</a>
-                                                        <a href="sign_in.html" class="item channel_item page__links">Sign In</a>
-                                                        <a href="sign_up.html" class="item channel_item page__links">Sign Up</a>
-                                                        <a href="forgot_password.html" class="item channel_item page__links">Forgot Password</a>
-                                                        <a href="contact_us.html" class="item channel_item page__links">問い合わせる</a>
-                                                    </div>
-                                                </div>
-                                            </li>
-
-
-
                                             <li>
                                                 <!-- Authentication Links -->
                                                 {{-- ログインしていない場合 --}}
