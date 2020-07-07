@@ -24,7 +24,7 @@
 					<div class="col-lg-12">
 						<div class="user-dt">
 							<div class="user-img">
-								<img src="{{ asset('/Frontend/images/koike2.jpg')}}" alt="">
+								<img src="{{ asset('/img/koike_photo.jpg')}}" alt="">
 								<div class="img-add">
 									<input type="file" id="file">
 									<label for="file"><i class="uil uil-camera-plus"></i></label>
@@ -41,7 +41,7 @@
 		<div class="">
 			<div class="container">
 				<div class="row">
-				
+
 					<div class="col-lg-9 col-md-8">
 						<div class="dashboard-right">
 							<div class="row">
@@ -131,7 +131,7 @@
 							</div>
 						</div>
 					</div>
-				
+
 					<div class="col-lg-3 col-md-4">
 						<div class="left-side-tabs">
 							<div class="dashboard-left-links">
