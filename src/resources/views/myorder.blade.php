@@ -41,7 +41,7 @@
 		<div class="">
 			<div class="container">
 				<div class="row">
-
+				
 					<div class="col-lg-9 col-md-8">
 						<div class="dashboard-right">
 							<div class="row">
@@ -50,10 +50,11 @@
 										<h4><i class="uil uil-box"></i>My Orders</h4>
 									</div>
 								</div>
+								@foreach($my_orders as $my_order)
 								<div class="col-lg-12 col-md-12">
 									<div class="pdpt-bg">
 										<div class="pdpt-title">
-											<h6>お受け取り予定時間 {{$my_order->order_pick_time}}</h6>
+											<h6>お受け取り予定時間  {{$my_order->order_date}}  {{$my_order->order_pick_time}}</h6>
 										</div>
 										<div class="order-body10">
 											<ul class="order-dtsll">
@@ -83,7 +84,7 @@
 												</div> -->
 												<div class="main-total-cart">
 													<h2>合計金額</h2>
-													<span>{{$my_order->order_total}}</span>
+													<span>{{$my_order->order_total}}円</span>
 												</div>
 											</div>
 											<div class="track-order">
@@ -105,7 +106,7 @@
 														<a href="#" class="bs-wizard-dot"></a>
 													</div>
 													<div class="bs-wizard-step disabled"><!-- active -->
-														<div class="text-center bs-wizard-stepnum">受け渡し済</div>
+														<div class="text-center bs-wizard-stepnum">受渡し済</div>
 														<div class="progress"><div class="progress-bar"></div></div>
 														<a href="#" class="bs-wizard-dot"></a>
 													</div>
@@ -125,12 +126,12 @@
 											</div> -->
 										</div>
 									</div>
-
 								</div>
+								@endforeach
 							</div>
 						</div>
 					</div>
-
+				
 					<div class="col-lg-3 col-md-4">
 						<div class="left-side-tabs">
 							<div class="dashboard-left-links">

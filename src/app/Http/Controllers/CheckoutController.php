@@ -12,6 +12,7 @@ use App\Order;
 use App\OrderDetail;
 use Illuminate\Support\Facades\DB;
 
+use Carbon\Carbon;
 
 class CheckoutController extends Controller
 {
@@ -65,8 +66,8 @@ class CheckoutController extends Controller
 
         //ordersテーブルに以下情報を登録
         $order = new Order;
-        // $date = new Carbon(Carbon::now());//エラー
-        $date = '2020-01-01';
+        $date = Carbon::now();
+        // $date = '2020-01-01';
         $store_id = session('store_id',0);
         $subtotal = session('subtotal',0);
         $tax = session('tax',0);

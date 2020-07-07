@@ -22,6 +22,7 @@
 						<input type="hidden" name="store_name" value="成城石井 アトレ五反田1店">
 						<input type="hidden" name="store_address" value="東京都品川区東五反田1丁目26−14">
 						<input type="hidden" name="store_phone" value="0357596750">
+                        <input type="hidden" name="store_id" value="1">
                         <a href="https://goo.gl/maps/KJVQ4nV5Wfhv6zoZ8" class="btn btn-outline-info" target="_blank">MAP</a>
                     </button>
                     </h5>
@@ -61,6 +62,7 @@
                         <input type="hidden" name="store_name" value="東急ストア　五反田店">
 						<input type="hidden" name="store_address" value="東京都品川区東五反田2-1-2">
 						<input type="hidden" name="store_phone" value="0334470109">
+                        <input type="hidden" name="store_id" value="2">
                         <a href="https://goo.gl/maps/Y3Kx3YDavC72" class="btn btn-outline-info" target="_blank">MAP</a>
                     </button>
                     </h5>
@@ -99,6 +101,7 @@
                         <input type="hidden" name="store_name" value="ライフエクストラ 東五反田店">
 						<input type="hidden" name="store_address" value="東京都品川区東五反田2丁目19−6">
 						<input type="hidden" name="store_phone" value="0354208851">
+                        <input type="hidden" name="store_id" value="3">
                         <a href="https://goo.gl/maps/piMmgDQFpX51TxCh7" class="btn btn-outline-info" target="_blank">MAP</a>
                     </button>
                     </h5>

@@ -40,6 +40,7 @@ Route::post("/pick_time_table", function (Request $request) {
     session()->put('store_name', $request->store_name);
     session()->put('store_address', $request->store_address);
     session()->put('store_phone', $request->store_phone);
+    session()->put('store_id', $request->store_id);
     // return var_dump(session('store_name').session('store_phone').session('store_address'));
     return view("pick_time_table");
 });
