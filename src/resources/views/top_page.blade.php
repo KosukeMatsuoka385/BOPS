@@ -4,7 +4,7 @@
 	<!-- Body Start -->
 	<div class="wrapper" >
         <div id="space-tag"></div>
-        <img  id="top_page_logo" src="{{asset('/Frontend/images/BOPS.png')}}" alt="BOPS" style="width: 100%; padding-top:50px; display: none;">
+        <img  id="top_page_logo" src="{{asset('/Frontend/images/BOPS.png')}}" alt="BOPS" style="width: 100%; padding-top:60px; display: none;">
     </div>
 	<!-- Body End -->
 

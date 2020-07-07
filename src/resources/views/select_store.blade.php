@@ -3,12 +3,12 @@
 <br><br>
 
 	<div class="main-title-tt">
-		<div class="main-title-left">
+		<div class="main-title-left" style='padding:20px 0 0 10px'>
 			<span>店舗を選んでください</span>
 		</div>
 	</div>
 
-	<p>< 選択店舗一覧 ></p>
+	<p style='padding-left: 10px'>< 選択店舗一覧 ></p>
 	<div class="accordion" id="accordionExample">
 
         <div class="card">
