@@ -17,3 +17,4 @@ name,category_id,cost,price,stock,description,img,store_id,is_addone
 太刀魚,1,100,170,10,埼玉県産,image_path,1,0
 おいしい牛乳,3,80,110,10,埼玉県産,image_path,1,0
 オクラ,2,40,100,10,埼玉県産,image_path,1,0
+コロッケ,5,40,100,10,埼玉県産,image_path,1,0
