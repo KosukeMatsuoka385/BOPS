@@ -37,7 +37,8 @@
     <link href="{{ asset('/Frontend/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('/Frontend/css/responsive.css') }}" rel="stylesheet">
     <link href="{{ asset('/Frontend/css/night-mode.css') }}" rel="stylesheet">
-	<link href="{{ asset('/Frontend/css/step-wizard.css')}}" rel="stylesheet">
+    <link href="{{ asset('/Frontend/css/step-wizard.css')}}" rel="stylesheet">
+    
 
     <!-- Vendor Stylesheets -->
     <link href="{{ asset('/Frontend/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
