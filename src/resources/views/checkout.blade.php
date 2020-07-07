@@ -35,9 +35,9 @@
 								<div id="collapseOne" class="collapse in show" data-parent="#checkout_wizard">
 									<div class="checkout-step-body">
 										<p>お客様の電話番号（遅延などの際に連絡させて頂くことがあります）</p>	
-															<div class="login-phone">
+															<!-- <div class="login-phone"> -->
 																<input type="text" class="form-control" placeholder="Phone Number" name="phone" value="">
-															</div>
+															<!-- </div> -->
 										<div class="otp-verifaction">
 											<div class="row">
 												<div class="col-lg-12">
