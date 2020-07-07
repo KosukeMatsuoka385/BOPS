@@ -1,8 +1,6 @@
 @extends("layouts.app")
 @section("content")
 
-
-
 	<!-- Body Start -->
 	<div class="wrapper">
 		<div class="gambo-Breadcrumb">
@@ -69,13 +67,13 @@
 															<div class="row">
 																<div class="col-lg-6 col-md-12">
 																	
-																		<label class="control-label">店舗名</label>
+																		<label class="control-label">店舗名：</label>
 																		<!-- <input id="name" name="" type="text" placeholder="Name" class="form-control input-md" required="" name="{{ Session::get('store_name') }}"> -->
 																		{{ Session::get('store_name') }}
 																</div>
 																<div class="col-lg-6 col-md-12">
 																	
-																		<label class="control-label">住所</label>
+																		<label class="control-label">住所：</label>
 																		<!-- <input id="email" name="email" type="text" placeholder="Address" class="form-control input-md" required="" name="{{ Session::get('store_address') }}"> -->
 																		{{ Session::get('store_address') }}
 																</div>
@@ -246,7 +244,7 @@
 							
 							<div class="main-total-cart">
 								<h2>合計金額</h2>
-								<span>{{ Session::get('total') }}</span>
+								<span>{{ Session::get('total') }}円</span>
 							</div>
                         </div>	
 					</div>
@@ -256,8 +254,5 @@
 		</form>	
 	</div>
 	<!-- Body End -->
-	<!-- Footer Start -->
-	
-    <!-- Footer End -->
 	
 @endsection    

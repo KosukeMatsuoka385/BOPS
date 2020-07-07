@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('phone')->nullable();
             $table->string('credit_name')->nullable();
-            $table->integer('credit_number')->nullable();
+            $table->string('credit_number')->nullable();
             $table->integer('credit_exmonth')->nullable();
             $table->integer('credit_exyear')->nullable();
             $table->integer('credit_cvv')->nullable();
