@@ -24,7 +24,7 @@
 					<div class="col-lg-12">
 						<div class="user-dt">
 							<div class="user-img">
-								<img src="{{ asset('/img/koike_photo.jpg')}}" alt="">
+								<img src="{{ asset('/img/koike2.jpg')}}" alt="">
 								<div class="img-add">
 									<input type="file" id="file">
 									<label for="file"><i class="uil uil-camera-plus"></i></label>
@@ -93,7 +93,7 @@
 													<span>{{$my_order->order_total}}円</span>
 												</div>
 											</div>
-											
+
 											<div class="track-order">
 												<h4>注文状況</h4>
 												<div class="bs-wizard" style="border-bottom:0;">
