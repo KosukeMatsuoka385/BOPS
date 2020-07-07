@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 //default
 Route::get("/", function () {
-    return view("gambo");
+    return view("top_page");
+    // return view("gambo");
 });
 
 Route::get("/menus", "MenusController@show");
