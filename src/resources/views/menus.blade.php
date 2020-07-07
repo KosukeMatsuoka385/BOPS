@@ -31,7 +31,7 @@
 											<div class="top-text-1">Buy More & Save More</div>
 											<span>Fresh Vegetables</span>
 										</div> --}}
-										<a href="#" class="Offer-shop-btn hover-btn"><input type="checkbox"  name="items[]" value="{{ json_encode($recommend_item,JSON_UNESCAPED_UNICODE) }}">{{ $recommend_item->item_price }}円</a>
+										<span href="#" class="Offer-shop-btn hover-btn"><input type="checkbox"  name="items[]" value="{{ json_encode($recommend_item,JSON_UNESCAPED_UNICODE) }}">   {{ $recommend_item->item_price }}円</span>
 									</div>
 								</div>
 							</div>
@@ -58,12 +58,12 @@
 						<div class="owl-carousel cate-slider owl-theme">
 							@foreach ($categories as $category)
 							<div class="item">
-								<a href="#" class="category-item">
+								<span href="#" class="category-item">
 									<div class="cate-img">
 										<img src="{{ asset($category->img) }}" alt="">
 									</div>
 									<h4>{{ $category->name }}</h4>
-								</a>
+								</span>
 								{{-- <ul id="accordion" class="accordion"> --}}
 								<ul class="accordion">
 									<li>
@@ -80,8 +80,8 @@
 											<li>
 												<input type="checkbox" name="items[]" value='{{ json_encode($category_item,JSON_UNESCAPED_UNICODE) }}'>
 												{{-- <input type="checkbox" name="items[]" value='{{ $umenu_item }}'> --}}
-												<a href="#">{{ $category_item->item_name }}</a>
-												<a href="#">{{ $category_item->item_price }}円</a>
+												<span href="#">{{ $category_item->item_name }}</span>
+												<span href="#" class="price_right">{{ $category_item->item_price }}円</span>
 											</li>
 											@else
 											@endif
@@ -107,7 +107,7 @@
 								<span>Usual Menu</span>
 								<h2>いつものメニュー</h2>
 							</div>
-							<a href="#" class="see-more-btn">See All</a>
+							<span href="#" class="see-more-btn">See All</span>
 						</div>
 					</div>
 					<div class="col-md-12">
@@ -158,8 +158,8 @@
 												{{-- TODO: メニューチェック時にすべてにチェック --}}
 												<input class="ingredient" type="checkbox" name="items[]" value='{{ json_encode($umenu_item,JSON_UNESCAPED_UNICODE) }}'>
 												{{-- <input type="checkbox" name="items[]" value='{{ $umenu_item }}'> --}}
-												<a href="#">{{ $umenu_item->item_name }}</a>
-												<a href="#">{{ $umenu_item->item_price }}円</a>
+												<span href="#">{{ $umenu_item->item_name }}</span>
+												<span href="#" class="price_right">{{ $umenu_item->item_price }}円</span>
 											</li>
 											@else
 											@endif
