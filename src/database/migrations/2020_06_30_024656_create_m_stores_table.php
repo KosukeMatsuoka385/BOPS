@@ -17,7 +17,7 @@
 						$table->string('name');
 						$table->integer('store_group_id')->unsigned();
 						$table->string('address');
-						$table->integer('tel')->nullable();
+						$table->string('tel')->nullable();
 						$table->string('open_time')->nullable();
 						$table->string('close_time')->nullable();
 						$table->string('appearance_img')->nullable();

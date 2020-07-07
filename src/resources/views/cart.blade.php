@@ -45,7 +45,7 @@
 <body>
 	<!-- Cart Sidebar Offset Start-->
 	<div class="bs-canvas bs-canvas-left position-fixed bg-cart h-100">
-		<div class="bs-canvas-header side-cart-header p-3 ">
+		<div class="bs-canvas-header side-cart-header p-3 " style="padding: 1.3rem!important;">
 			<div class="d-inline-block  main-cart-title">カートの中身<span>{{$count}}</span><span>品</span></div>
 			<button type="button" class="bs-canvas-close close" aria-label="Close" onclick="location.href='/menus'" style="font-weight: 200; line-height: 1.3;">戻る</button>
 		</div>
