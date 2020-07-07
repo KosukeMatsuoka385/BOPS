@@ -31,7 +31,7 @@
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-  
+
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -47,7 +47,7 @@
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-  
+
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -63,7 +63,7 @@
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-  
+
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -79,7 +79,7 @@
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-  
+
   100% {
     -moz-transform: rotate(359deg);
     -o-transform: rotate(359deg);
@@ -214,7 +214,7 @@
     -webkit-transform: translate(-2px);
     transform: translate(-2px);
   }
-  
+
   75% {
     -moz-transform: translate(2px);
     -o-transform: translate(2px);
@@ -230,7 +230,7 @@
     -webkit-transform: translate(-2px);
     transform: translate(-2px);
   }
-  
+
   75% {
     -moz-transform: translate(2px);
     -o-transform: translate(2px);
@@ -246,7 +246,7 @@
     -webkit-transform: translate(-2px);
     transform: translate(-2px);
   }
-  
+
   75% {
     -moz-transform: translate(2px);
     -o-transform: translate(2px);
@@ -262,7 +262,7 @@
     -webkit-transform: translate(-2px);
     transform: translate(-2px);
   }
-  
+
   75% {
     -moz-transform: translate(2px);
     -o-transform: translate(2px);
@@ -278,7 +278,7 @@
     -webkit-transform: translate(-2px);
     transform: translate(-2px);
   }
-  
+
   75% {
     -moz-transform: translate(2px);
     -o-transform: translate(2px);
@@ -411,4 +411,3 @@
 }
 
 /* Blink Animation End */
-  

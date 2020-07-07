@@ -1,15 +1,75 @@
 <?php
 use Illuminate\Http\Response;
 
+// 追加
+use Illuminate\Http\Request;
+
 //default
 Route::get("/", function () {
-    // return view("welcome");
-    return view("gambo");
+    return view("top_page");
+    // return view("gambo");
 });
+
+Route::get("/menus", "MenusController@show");
+
 //Demo (Delete after site publish.)
 Route::get("/tables_check_view_html",function(){
     return view("tables_check_view_html");
 });
+
+//checkout
+Route::post("/checkout", "CheckoutController@index");
+Route::post("/orderplaced", "CheckoutController@store");
+// Route::post("/orderplaced", "CheckoutController@insert");
+
+//orderplaced
+Route::get("/orderplaced", "CheckoutController@index");
+//myorder
+Route::get("/myorder", "MyOrderController@index");
+
+
+Route::post("/put_pick_time", function (Request $request) {
+    // session()->put('pick_time', $request->pick_time);
+    session()->put('pick_time', $request->pick_time);
+    // return var_dump(session('pick_time'));
+    return redirect('/menus');
+    // return redirect('/menu')->action('MenusController@show');
+});
+
+
+Route::post("/pick_time_table", function (Request $request) {
+    session()->put('store_name', $request->store_name);
+    session()->put('store_address', $request->store_address);
+    session()->put('store_phone', $request->store_phone);
+    session()->put('store_id', $request->store_id);
+    // return var_dump(session('store_name').session('store_phone').session('store_address'));
+    return view("pick_time_table");
+});
+
+Route::get("/select_store", function () {
+    return view("select_store");
+});
+
+//menus_test
+// Route::get("/menus_test",function(){
+//     return view("menus_test");
+// });
+
+//checkout_test
+// Route::post("/checkout_test",function(){
+//     return view("checkout_test");
+// });
+
+
+//session
+Route::get("/cart", "CartSessionController@index");
+Route::post("/cart", "CartSessionController@store");
+// Route::post("/cart_toggle", "CartSessionController@store");
+// Route::post("/cart", "CartSessionController@update");
+// Route::post("/cart/delete/{index}", "CartSessionController@store");
+// Route::delete("/cart/delete/{index}", "CartSessionController@destroy");
+
+// Route::delete('cart/destroy/{id}', 'CartSessionController@destroy');
 
 //=======================================================================
 //index
@@ -214,3 +274,7 @@ Route::put("m_pick_time/{id}", "MPickTimesController@update");
 //destroy
 Route::delete("m_pick_time/{id}", "MPickTimesController@destroy");
 //=======================================================================
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

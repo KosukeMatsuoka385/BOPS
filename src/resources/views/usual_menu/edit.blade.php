@@ -34,9 +34,9 @@
                                             </div>
                                         </div>
 										<div class="form-group">
-                                            <label for="image" class="col-md-4 control-label">image: </label>
+                                            <label for="img" class="col-md-4 control-label">img: </label>
                                             <div class="col-md-6">
-                                                <input class="form-control" required="required" name="image" type="text" id="image" value="{{$usual_menu->image}}">
+                                                <input class="form-control" name="img" type="text" id="img" value="{{$usual_menu->img}}">
                                             </div>
                                         </div>
 										<div class="form-group">

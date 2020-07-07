@@ -15,6 +15,7 @@
                     Schema::create("m_store_groups", function (Blueprint $table) {
 						$table->increments('id');
 						$table->string('name');
+						$table->string('logo_img')->nullable();
 
 
 

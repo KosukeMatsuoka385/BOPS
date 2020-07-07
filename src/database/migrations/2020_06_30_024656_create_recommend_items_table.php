@@ -2,7 +2,7 @@
             use Illuminate\Support\Facades\Schema;
             use Illuminate\Database\Schema\Blueprint;
             use Illuminate\Database\Migrations\Migration;
-            
+
             class CreateRecommendItemsTable extends Migration
             {
                 /**
@@ -14,7 +14,7 @@
                 {
                     Schema::create("recommend_items", function (Blueprint $table) {
 						$table->increments('id')->unsigned();
-						$table->string('pop_image');
+						$table->string('pop_img');
 						$table->integer('item_id')->unsigned();
 						$table->timestamps();
 						$table->softDeletes();
@@ -34,7 +34,7 @@
 
                     });
                 }
-    
+
                 /**
                  * Reverse the migrations.
                  *
@@ -45,4 +45,3 @@
                     Schema::dropIfExists("recommend_items");
                 }
             }
-        

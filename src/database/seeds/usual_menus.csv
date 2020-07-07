@@ -1,0 +1,11 @@
+name,img,user_id
+肉じゃが,/img/nikujaga.jpg,1
+カレー,/img/curry.jpg,1
+キムチ鍋,/img/kimuchi_nabe.jpg,1
+肉じゃが,/img/nikujaga.jpg,2
+カレー,/img/curry.jpg,2
+キムチ鍋,/img/kimuchi_nabe.jpg,2
+肉じゃが,/img/nikujaga.jpg,3
+カレー,/img/curry.jpg,3
+キムチ鍋,/img/kimuchi_nabe.jpg,3
+チャーハン,img_path,4

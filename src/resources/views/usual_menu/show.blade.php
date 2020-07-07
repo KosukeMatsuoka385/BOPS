@@ -24,7 +24,7 @@
                                     <tbody>
 										<tr><th>id</th><td>{{$usual_menu->id}} </td></tr>
 										<tr><th>name</th><td>{{$usual_menu->name}} </td></tr>
-										<tr><th>image</th><td>{{$usual_menu->image}} </td></tr>
+										<tr><th>img</th><td>{{$usual_menu->img}} </td></tr>
 										<tr><th>user_id</th><td>{{$usual_menu->user_id}} </td></tr>
 										<tr><th>name</th><td>{{$usual_menu->name}} </td></tr>
 										<tr><th>email</th><td>{{$usual_menu->email}} </td></tr>
