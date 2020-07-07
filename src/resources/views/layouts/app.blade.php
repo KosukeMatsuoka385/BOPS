@@ -38,7 +38,7 @@
     <link href="{{ asset('/Frontend/css/responsive.css') }}" rel="stylesheet">
     <link href="{{ asset('/Frontend/css/night-mode.css') }}" rel="stylesheet">
     <link href="{{ asset('/Frontend/css/step-wizard.css')}}" rel="stylesheet">
-    
+
 
     <!-- Vendor Stylesheets -->
     <link href="{{ asset('/Frontend/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
@@ -243,7 +243,8 @@
                             <nav class="navbar navbar-expand-lg navbar-light py-3">
                                 <div class="container-fluid">
                                     <button class="navbar-toggler menu_toggle_btn" type="button" data-target="#navbarSupportedContent"><i class="uil uil-bars"></i></button>
-                                    <div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
+                                    {{-- ↓　navbar-collapseを削除  --}}
+                                    <div class="collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
                                         <ul class="navbar-nav main_nav align-self-stretch">
 
                                             <li>
@@ -410,8 +411,8 @@
                             <div class="row">
                                 <div class="col-md-6 col-sm-6">
                                     <ul class="call-email-alt">
-                                        <li><a href="#" class="callemail"><i class="uil uil-dialpad-alt"></i>1800-000-000</a></li>
-                                        <li><a href="#" class="callemail"><i class="uil uil-envelope-alt"></i>info@gambosupermarket.com</a></li>
+                                        <li><a href="#" class="callemail"><i class="uil uil-dialpad-alt"></i>03-5413-5045</a></li>
+                                        <li><a href="#" class="callemail"><i class="uil uil-envelope-alt"></i>info@BOPS.com</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6 col-sm-6">

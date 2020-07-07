@@ -68,7 +68,8 @@
 								<ul class="accordion">
 									<li>
 										<div class="link">
-											{{-- <i class="fa fa-paint-brush"></i> --}}
+                                            {{-- <i class="fa fa-paint-brush"></i> --}}
+
 											<span>
 												{{ $category->name }}
 											</span>
@@ -113,7 +114,9 @@
 					<div class="col-md-12">
 						<div class="owl-carousel featured-slider owl-theme">
 
-							@foreach($usual_menus as $usual_menu)
+                            <?php $ii=0; ?>
+                            @foreach($usual_menus as $usual_menu)
+
 							<div class="item">
 								<div class="product-item">
 								{{-- <ul id="accordion" class="product-item accordion"> --}}
@@ -128,35 +131,37 @@
 									{{-- </a> --}}
 									<div class="product-text-dt">
 										{{-- <p>Available<span>(In Stock)</span></p> --}}
-										<h4>{{ $usual_menu->name }}</h4>
-										{{-- <div class="product-price">$12 <span>$15</span></div> --}}
-										{{-- <div class="qty-cart">
-											<div class="quantity buttons_added">
-												<input type="button" value="-" class="minus minus-btn">
-												<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
-												<input type="button" value="+" class="plus plus-btn">
-											</div>
-											<span class="cart-icon"><i class="uil uil-shopping-cart-alt"></i></span>
-										</div> --}}
+                                        <h4>{{ $usual_menu->name }}</h4>
+                                        <div>
+                                            {{-- <div class="product-price">$12 <span>$15</span></div> --}}
+                                            {{-- <div class="qty-cart">
+                                                <div class="quantity buttons_added">
+                                                    <input type="button" value="-" class="minus minus-btn">
+                                                    <input type="number" step="1" name="quantity" value="1" class="input-text qty text">
+                                                    <input type="button" value="+" class="plus plus-btn">
+                                                </div>
+                                                <span class="cart-icon"><i class="uil uil-shopping-cart-alt"></i></span>
+                                            </div> --}}
+                                        </div>
 									</div>
 								</div>
 
-
+                                <?php $i=0; ?>
 								{{-- <ul id="accordion" class="accordion"> --}}
 								<ul class="accordion">
 									<li>
 										<div class="link">
 											{{-- <i class="fa fa-paint-brush"></i> --}}
-											<input class="dish" type="checkbox">
+											<input class="dish menu_title_m<?php echo $ii; ?>" type="checkbox" name="menu_title_m<?php echo $ii; ?>" onClick="AllChecked();" >
 											{{ $usual_menu->name }}
 											<i class="fa fa-chevron-down"></i>
 										</div>
 										<ul class="submenu">
 											@foreach($umenu_items as $umenu_item)
 											@if ($umenu_item->umenu_id == $usual_menu->id)
-											<li>
+											<div class="boxes"><li>
 												{{-- TODO: メニューチェック時にすべてにチェック --}}
-												<input class="ingredient" type="checkbox" name="items[]" value='{{ json_encode($umenu_item,JSON_UNESCAPED_UNICODE) }}'>
+												<input class="ingredient items_m<?php echo $ii; ?>" type="checkbox" name="items[]" value='{{ json_encode($umenu_item,JSON_UNESCAPED_UNICODE) }}'>
 												{{-- <input type="checkbox" name="items[]" value='{{ $umenu_item }}'> --}}
 												<span href="#">{{ $umenu_item->item_name }}</span>
 												<span href="#" class="price_right">{{ $umenu_item->item_price }}円</span>
@@ -167,7 +172,8 @@
 										</ul>
 									</li>
 								</ul>
-							</div>
+                            </div>
+                            <?php  $ii++; ?>
 							@endforeach
 
 							{{-- <div class="item">
@@ -812,6 +818,43 @@
 	</div>
 	</form>
 	<!-- Body End -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script language="JavaScript" type="text/javascript">
+        $(function Allchecked() {
+            // 「全選択」する
+            // $('.dish').on('click', function() {
+            //     $("input[name='items[]']").prop('checked', this.checked);
+            // });
+
+            
+            // for (let i = 0; i < 2; i++) {
+            //     $('.menu_title_m'.i).on('click', function() {
+            //         $(".items_m".i).prop('checked', this.checked);
+            //     });
+
+                // 「全選択」以外のチェックボックスがクリックされたら、
+                // $(".menu_title_m".i).on('click', function() {
+                // if ($('.boxes :checked').length == $('.boxes :input').length) {
+                //     // 全てのチェックボックスにチェックが入っていたら、「全選択」 = checked
+                //     $(".items_m".i).prop('checked', true);
+                // } else {
+                //     // 1つでもチェックが入っていたら、「全選択」 = checked
+                //     $(".items_m".i).prop('checked', false);
+                // }
+            //     });
+            // }
+
+            $('.menu_title_m0').on('click', function() {
+                $(".items_m0").prop('checked', this.checked);
+            });
+            $('.menu_title_m1').on('click', function() {
+                $(".items_m1").prop('checked', this.checked);
+            });
+            $('.menu_title_m2').on('click', function() {
+                $(".items_m2").prop('checked', this.checked);
+            });
 
 
+        });
+    </script>
 @endsection

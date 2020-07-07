@@ -66,7 +66,7 @@
 												<li>
 													<div class="order-dt47">
 														<h4>{{$my_order->order_store_name}}</h4>
-														<p>{{$my_order->order_store_tel}}</p>
+														<p>{{$my_order->order_store_tel}} <a href="{{$my_order->order_store_map}}">MAP</a></p>
 														<div class="order-title">購入詳細 <span data-inverted="" data-tooltip="詳細" data-position="top center">?</span></div>
 													</div>
 												</li>
