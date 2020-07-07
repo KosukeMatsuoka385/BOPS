@@ -68,7 +68,7 @@ class CheckoutController extends Controller
         $order = new Order;
         $date = Carbon::now();
         // $date = '2020-01-01';
-        $store_id = session('store_id',1);
+        $store_id = session('store_id',0);
         $subtotal = session('subtotal',0);
         $tax = session('tax',0);
         $discount = session('discount',0);
