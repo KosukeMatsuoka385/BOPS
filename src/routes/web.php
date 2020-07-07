@@ -29,7 +29,7 @@ Route::get("/myorder", "MyOrderController@index");
 
 Route::post("/put_pick_time", function (Request $request) {
     // session()->put('pick_time', $request->pick_time);
-    session()->put('pick_time', '15:45');
+    session()->put('pick_time', $request->pick_time);
     // return var_dump(session('pick_time'));
     return redirect('/menus');
     // return redirect('/menu')->action('MenusController@show');
@@ -38,7 +38,9 @@ Route::post("/put_pick_time", function (Request $request) {
 
 Route::post("/pick_time_table", function (Request $request) {
     session()->put('store_name', $request->store_name);
-    // return var_dump(session('store_name'));
+    session()->put('store_address', $request->store_address);
+    session()->put('store_phone', $request->store_phone);
+    // return var_dump(session('store_name').session('store_phone').session('store_address'));
     return view("pick_time_table");
 });
 
