@@ -53,6 +53,12 @@
 								@foreach($my_orders as $my_order)
 								<div class="col-lg-12 col-md-12">
 									<div class="pdpt-bg">
+											<div class="total-dt">
+												<div class="main-total-cart">
+													<h2>注文番号</h2>
+													<span>#123</span>
+												</div>
+											</div>
 										<div class="pdpt-title">
 											<h6>お受け取り予定時間  {{$my_order->order_date}}  {{$my_order->order_pick_time}}</h6>
 										</div>
@@ -87,6 +93,7 @@
 													<span>{{$my_order->order_total}}円</span>
 												</div>
 											</div>
+											
 											<div class="track-order">
 												<h4>注文状況</h4>
 												<div class="bs-wizard" style="border-bottom:0;">

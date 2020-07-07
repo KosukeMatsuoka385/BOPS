@@ -24,7 +24,8 @@
 						<div class="order-placed-dt">
 							<i class="uil uil-check-circle icon-circle"></i>
 							<h2>注文を承りました</h2>
-                            <p>ご注文ありがとうございます!  <br>お受け取り店舗 - <span>{{ Session::get('store_name') }}</span>
+                            <p>ご注文ありがとうございます!  <br>注文番号 - <span>#123</span>
+							<br>お受け取り店舗 - <span>{{ Session::get('store_name') }}</span>
                             <br>お受け取り予定時間 - <span>{{ Session::get('pick_time') }}</span></p>
 							<div class="delivery-address-bg">
 								<div class="title585">
