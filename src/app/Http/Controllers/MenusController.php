@@ -14,7 +14,8 @@ class MenusController extends Controller
 
         // $user_id = Auth::user()->id;
         $user_id = 1;
-        $store_id = session('store_id',1);
+        // $store_id = session('store_id',1);
+        $store_id = 1;
 
         $usual_menus = DB::table("usual_menus")
         ->select('id','name','img')
