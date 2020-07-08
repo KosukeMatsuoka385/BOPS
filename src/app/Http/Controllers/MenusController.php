@@ -12,8 +12,8 @@ class MenusController extends Controller
     public function show(Request $request)
     {
 
-        $user_id = Auth::user()->id;
-        // $user_id = 1;
+        // $user_id = Auth::user()->id;
+        $user_id = 1;
         $store_id = session('store_id',1);
 
         $usual_menus = DB::table("usual_menus")
